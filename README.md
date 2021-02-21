@@ -8,7 +8,9 @@
 
 
 
-### :pencil: TIL 규칙 :pencil:
+
+
+## :pencil: TIL 규칙 :pencil:
 
 :pencil2: 주말 및 공휴일을 제외하고는 **매일** 작성하기!! 
 
