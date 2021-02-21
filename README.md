@@ -24,9 +24,9 @@
 
 ## 구조
 
-:file_folder:Git
+:file_folder: Git
 
-:file_folder:HeadFirstJava
+:file_folder: HeadFirstJava
 
-:file_folder:Spring
+:file_folder: Spring
 
