@@ -103,4 +103,6 @@ replication
 
 - watch가 트리거되면 클라이언트는 znode가 변경됨을 알리는 패킷을 보낸다.
 
+- watch란 모니터링 기능과 다르지 않다.
+
 ​       https://rjswn0315.tistory.com/37
