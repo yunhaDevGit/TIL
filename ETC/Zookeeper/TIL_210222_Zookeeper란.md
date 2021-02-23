@@ -25,6 +25,41 @@ https://engkimbs.tistory.com/660
 3. leader 서버는 그 정보를 다른 곳에 브로드 캐스트한다.
 4. 업데이트 정보를 받은 나머지 follower 주키퍼 서버들은 그 내용을 갱신하여 전체 서버들의 데이터들이 일관된 상태로 유지된 상태로 있는다.
 
+![img](https://lh6.googleusercontent.com/uGLJmgCknhwt5Y7g7Dubb9PdB0ICn466eoQG76V4BoKwQ_vmyN6Qrk9w1nBQtv_QA1G-hF_shplAMhC86lIcTVTBEDA1knET0EowWEKYQKi-GhoOhXXtUgeTP-JXwoLP-m0vBRLm)
+
+- Leader
+- Follower
+
+
+
+**클라이언트에서 zookeeper 앙상블(zookeeper cluster)에 연결할 때 커넥션 문자열에 앙상블을 구성하는 zookeeper 서버 주소를 다수 포함할 수 있다.**
+
+**여러 개의 zookeeper 서버를 두고 하나의 클러스터로 동작. 클라이언트를 여러 서버에 분산**
+
+- zookeeper 서버 중 하나가 죽어도 주키퍼 자체에는 영향이 없도록 지속적으로 동작해야 한다.
+  - 데이터를 복제해서 다른 zookeeper 서버에도 동일하게 저장한다
+  - 모든 zookeeper 서버의 데이터가 동기화 되기 위해 리더를 뽑는다
+
+http://blog.naver.com/PostView.nhn?blogId=alice_k106&logNo=220614228476
+
+
+
+1. 클라이언트는 커넥션 문자열에 포함 된 zookeeper 주소 중 하나에 접근해서 세션을 맺는다
+
+2. 1) 읽기 명령 : 클라이언트가 전달한 읽기 명령은 현재 연결된 zookeeper 서버에서 바로 반환
+
+   2) 쓰기 명령 : 리더 서버로 전달되고, 리더 서버는 팔로워 서버들에게 해당 쓰기를 할 수 있는지 질의 후, 과반수 이상의 follower에게 쓸 수 있다는 응답을 받으면 리더는 follower에게 데이터를 쓰도록 지시한다.
+
+
+
+------
+
+##### cloudit zookeeper queue
+
+replication
+
+- topic으로 통하는 모든 데이터의 read/write는 오직 leader에서 이뤄지고, follower는 leader와 sync를 유지함으로써 leader에 문제가 생겼을 경우 follower들 중 하나가 leader 역할을 한다.
+
 
 
 ### Curator / CuratorFramework
