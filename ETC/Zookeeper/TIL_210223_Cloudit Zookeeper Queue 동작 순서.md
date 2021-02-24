@@ -4,17 +4,21 @@
 
 ##### ClouditCommonConfig.java
 
+![img](https://lh6.googleusercontent.com/ndOQoiqdWYoVunCGL1B9ywP7lzv-olWY2THmPKySeLj-fGDUkwGwcLFbbIigqwEAOaA23PyYDru3viUv6YaIc5agsv-tzaP5fkJMXRNnwWGFgYp43s8DJb1ZBmSopgoB7H7e54TN)
+
 -> QueueActionProducer에 대해 bean 등록
 
 ​    (ace_admd, dna_admd, sos_admd queue path를 갖는 객체 생성)
 
 -> QueueActionProducer 실행 (start)
 
-![img](https://lh6.googleusercontent.com/ndOQoiqdWYoVunCGL1B9ywP7lzv-olWY2THmPKySeLj-fGDUkwGwcLFbbIigqwEAOaA23PyYDru3viUv6YaIc5agsv-tzaP5fkJMXRNnwWGFgYp43s8DJb1ZBmSopgoB7H7e54TN)
+
 
 
 
 ##### QueueActionProducer.java
+
+![img](https://lh3.googleusercontent.com/fHSoPgP48eVroab97Mg9y_Vazx1T3CKh6f_1P_-cA2FFDgUO2caRBjgWdGyjdAKiY2v7PziWJj3jzTFWp3m9eK-TARxC4SzZRqyIOAaMuBboQz6Z-MsQc3QuvanwQubrtbvswvDV)
 
 CuratorFramework curator = client.getCuratorFramework
 
@@ -50,15 +54,26 @@ queue = builder.lockPath(queuePath+”-lock”).buildQueue()
 
   https://curator.apache.org/curator-recipes/distributed-queue.html
 
-![img](https://lh3.googleusercontent.com/fHSoPgP48eVroab97Mg9y_Vazx1T3CKh6f_1P_-cA2FFDgUO2caRBjgWdGyjdAKiY2v7PziWJj3jzTFWp3m9eK-TARxC4SzZRqyIOAaMuBboQz6Z-MsQc3QuvanwQubrtbvswvDV)
+
 
 
 
 ##### ServerServiceImpl.java
 
--> queueActionProduver.put()
-
 ![img](https://lh6.googleusercontent.com/OIMfKh1tshi7f2sil4IDSp2S7Sm8yNMN33QgNj_BrpwCEbh4XEzqODXc4Rsg_Lu0oCsKlFB8SPE-gLlba7lE6zpT-cWcv-YzGSw_KMKH2F1mZFPm5SGGV4g0ybb5mcRt5qt13-Eb)
+
+-> queueActionProducer.put()
+
+
+
+![img](https://lh4.googleusercontent.com/nK_xfBW6NmnNy3umcJtUa2Nbv32w5FVWZXYuZShnSU7Ero135ks05WRN9DDj3-sR-O_V1gTmHbPdwFl7nPU23_hdOVO6AD_nI0fXJVyQ9f8-TPokdsvLi9JfVKqM68n5l_wVHz9n)
+
+이 때의 queueActionProducer는 위에서 다음과 같이 @Autowired와 @Qualifier 어노테이션을 통해 의존성 주입을 해준다.
+
+```
+@Qualifier
+- 동일한 타입을 가진 bean 객체가 여러개일 경우 어떤 bean을 주입할 지 스프링 컨테이너에게 알려준다. 
+```
 
 
 
@@ -107,6 +122,8 @@ queue = builder.lockPath(queuePath+”-lock”).buildQueue()
 
 ##### WatcherDelegate.java
 
+![img](https://lh4.googleusercontent.com/hjpgVBc0QqNRhBmaP1s1g6XKEeF6IBsdF8u8XYFZ-NS2ZddWo9Tchb4t2JQrrVEXbMhFwzCwmhfjv9-3KUPVuzWcHTzZrZkmCAk4AmG6ngjJ-GA9eE-_HKaOdfamRIJTaJBKp6tY)
+
 -> @Override
 
 ​    public void process ~
@@ -122,5 +139,20 @@ queue = builder.lockPath(queuePath+”-lock”).buildQueue()
 
 -> zookeeper client는 zookeeper server와 연결되어 event를 받는다.
 
-**![img](https://lh4.googleusercontent.com/hjpgVBc0QqNRhBmaP1s1g6XKEeF6IBsdF8u8XYFZ-NS2ZddWo9Tchb4t2JQrrVEXbMhFwzCwmhfjv9-3KUPVuzWcHTzZrZkmCAk4AmG6ngjJ-GA9eE-_HKaOdfamRIJTaJBKp6tY)**
 
+
+--------
+
+
+
+### zookeeper leader 선출
+
+zookeeper의 리더는 내부 알고리즘에 의해 선출된다.
+
+어떤 노드가 leader인지는 leaderSelector가 leader노드를 인지할 수 있다. 
+
+![img](https://lh4.googleusercontent.com/4ftE0s3mgmOOTpXHQifiSMgV_R0S_kcw8re2NTui8RfAMet6FCteS7w2PkSgtAedyO4Dn2bQqf4rrGxH9_l3PBnGfd-r0xQQCj6wGGBZKs_g0uVxri_2RZtyadjd8zu4a-cjyMWN)
+
+https://curator.apache.org/curator-recipes/leader-election.html
+
+<img src="C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210224105751663.png" alt="image-20210224105751663" style="zoom:80%;" />
