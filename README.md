@@ -26,9 +26,9 @@
 
 :file_folder: Git
 
-:file_folder: Head First Java [Git](https://github.com/yunhaDevGit/HeadFirstJava.git)
+:file_folder: Head First Java  ([Git](https://github.com/yunhaDevGit/HeadFirstJava.git))
 
-:file_folder: Spring [Git](https://github.com/yunhaDevGit/spring5_programming.git)
+:file_folder: Spring  ([Git](https://github.com/yunhaDevGit/spring5_programming.git))
 
 :file_folder: ETC
 
