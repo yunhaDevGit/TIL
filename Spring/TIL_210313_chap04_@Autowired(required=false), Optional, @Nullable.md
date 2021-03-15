@@ -44,13 +44,13 @@ print() 메서드는 dateTimeFormatter가 null인 경우에도 알맞게 동작�
 ***방법 1.이렇게 자동 주입할 대상이 필수가 아닌 경우에는 @Autowired 어노테이션에 required 속성을 false로 지정해주면 된다.***
 
 ```java
- 	@Autowired(required=false)
-    public void setDateFormatter(DateTimeFormatter dateTimeFormatter){
-        this.dateTimeFormatter = dateTimeFormatter;
-    }
+@Autowired(required=false)
+public void setDateFormatter(DateTimeFormatter dateTimeFormatter){
+   this.dateTimeFormatter = dateTimeFormatter;
+}
 ```
 
-- required 속성을 false로 지정하면 매칭되는 빈이 없어도 익셉션이 발생하지 않고, 자동 주입을 수행하지 않는다. 
+- required 속성을 false로 지정하면 **매칭되는 빈이 없어도 익셉션이 발생하지 않고, 자동 주입을 수행하지 않는다. **
 - 위의 예에서 DateTimeFormatter 타입의 빈이 없으면 익셉션을 발생하지 않고 setDateFormatter 메서드를 실행하지 않는다.
 
 
@@ -58,15 +58,17 @@ print() 메서드는 dateTimeFormatter가 null인 경우에도 알맞게 동작�
 ***방법 2. 스프링 5부터 @Autowired(required=false) 대신 자바 8의 Optional을 사용해도 된다***
 
 ```java
- 	@Autowired
-    public void setDateFormatter(Optional<DateTimeFormatter> formatterOpt){
+@Autowired
+public void setDateFormatter(Optional<DateTimeFormatter> formatterOpt){
         // 값 존재 여부에 따라 값을 dateTimeFormatter에 할당
-        if(formatterOpt.isPresent())
-	        this.dateTimeFormatter = formatterOpt.get();
-        else
-            this.dateTimeFormatter = null;
-    }
+    if(formatterOpt.isPresent())
+        this.dateTimeFormatter = formatterOpt.get();
+    else
+        this.dateTimeFormatter = null;
+}
 ```
+
+*Optional : 존재할 수도 있지만 안 할 수도 있다. null이 될 수도 있는 객체*
 
 - 자동 주입 대상 타입이 Optional일 경우, 일치하는 빈이 존재하지 않으면 값이 없는 Optional을 인자로 전달하고 익셉션을 발생 x
 - 일치하는 빈이 존재하면 해당 빈을 값으로 갖는 Optional을 인자로 전달
@@ -76,10 +78,10 @@ print() 메서드는 dateTimeFormatter가 null인 경우에도 알맞게 동작�
 ***방법3. @Nullable 어노테이션을 사용한다.***
 
 ```java
- 	@Autowired
-    public void setDateFormatter(@Nullable DateTimeFormatter dateTimeFormatter){
-        this.dateTimeFormatter = dateTimeFormatter;
-    }
+@Autowired
+public void setDateFormatter(@Nullable DateTimeFormatter dateTimeFormatter){
+    this.dateTimeFormatter = dateTimeFormatter;
+}
 ```
 
 @Autowired 어노테이션을 붙인 세터 메서드에 @Nullable 어노테이션을 의존성 주입 대상 파라미터에 붙이면,  스프링 컨테이너는 세터 메서드를 호출할 때 **주입할 빈이 존재하면 해당 빈을 인자로 전달**하고, **존재하지 않으면 인자로 null을 전달**한다.
