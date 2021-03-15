@@ -8,9 +8,9 @@
 
 ##### 1. File -> Setting -> Editor -> File Encodings
 
-<img src="C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302194609934.png" alt="image-20210302194609934" style="zoom:80%;" />
+![intellij_인코딩0](https://user-images.githubusercontent.com/48197531/111123882-33d26a00-85b3-11eb-8cb9-58f1b794588c.png)
 
-![image-20210302194132534](C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302194132534.png)
+![intellij_인코딩](https://user-images.githubusercontent.com/48197531/111123904-3af97800-85b3-11eb-9852-7f8b2e55d618.png)
 
 - Global Encoding, Project Encoding, Default encoding for properties files를 모두 UTF-8로 설정해준다.
 - Transparent native-to-ascii conversion은 선택
