@@ -8,9 +8,9 @@
 
 ##### 1. File -> Setting -> Editor -> File Encodings
 
-<img src="C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302194609934.png" alt="image-20210302194609934" style="zoom:80%;" />
+![intellij_인코딩0](https://user-images.githubusercontent.com/48197531/111124423-d854ac00-85b3-11eb-80dc-a1b94f64c779.png)
+![intellij_인코딩](https://user-images.githubusercontent.com/48197531/111124429-d985d900-85b3-11eb-9a65-5e96b834c501.png)
 
-![image-20210302194132534](C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302194132534.png)
 
 - Global Encoding, Project Encoding, Default encoding for properties files를 모두 UTF-8로 설정해준다.
 - Transparent native-to-ascii conversion은 선택
@@ -22,9 +22,9 @@
 
 *Shift + Shift*  ->  vm 검색
 
-<img src="C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302194818987.png" alt="image-20210302194818987" style="zoom:80%;" />
+![intellij_인코딩1](https://user-images.githubusercontent.com/48197531/111124464-e5719b00-85b3-11eb-88f2-52b95e09d91e.png)
+![intellij_인코딩2](https://user-images.githubusercontent.com/48197531/111124472-e6a2c800-85b3-11eb-9bbd-7d6509820b00.png)
 
-<img src="C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302195004061.png" alt="image-20210302195004061" style="zoom:80%;" />
 
 추가
 
@@ -35,8 +35,8 @@
 
 
 ##### 3. build.gradle 설정
+![intellij_인코딩3](https://user-images.githubusercontent.com/48197531/111124494-eb677c00-85b3-11eb-87a5-09a9a3cba5d8.png)
 
-<img src="C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302195555140.png" alt="image-20210302195555140" style="zoom:80%;" />
 
 추가
 
@@ -53,6 +53,5 @@ tasks.withType(JavaCompile) {
 
 ##### 4. Edit Configurations...
 
-<img src="C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302195106340.png" alt="image-20210302195106340" style="zoom:80%;" />
-
-<img src="C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302195304795.png" alt="image-20210302195304795" style="zoom:80%;" />
+![intellij_인코딩4](https://user-images.githubusercontent.com/48197531/111124517-f0c4c680-85b3-11eb-8e59-a115159fdc8c.png)
+![intellij_인코딩5](https://user-images.githubusercontent.com/48197531/111124527-f3bfb700-85b3-11eb-8241-21b878a5acde.png)
