@@ -8,9 +8,9 @@
 
 ##### 1. File -> Setting -> Editor -> File Encodings
 
-<img src="C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302194609934.png" alt="image-20210302194609934" style="zoom:80%;" />
+![intellij_인코딩0](https://user-images.githubusercontent.com/48197531/111123731-0980ac80-85b3-11eb-9c10-b39861f3c33d.png)
 
-![image-20210302194132534](C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302194132534.png)
+![intellij_인코딩](https://user-images.githubusercontent.com/48197531/111123714-0685bc00-85b3-11eb-9b28-20ff6a863ba6.png)
 
 - Global Encoding, Project Encoding, Default encoding for properties files를 모두 UTF-8로 설정해준다.
 - Transparent native-to-ascii conversion은 선택
@@ -22,9 +22,11 @@
 
 *Shift + Shift*  ->  vm 검색
 
-<img src="C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302194818987.png" alt="image-20210302194818987" style="zoom:80%;" />
 
-<img src="C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302195004061.png" alt="image-20210302195004061" style="zoom:80%;" />
+![intellij_인코딩1](https://user-images.githubusercontent.com/48197531/111123469-b575c800-85b2-11eb-88e6-e016b5be6555.png)
+
+![intellij_인코딩2](https://user-images.githubusercontent.com/48197531/111123471-b73f8b80-85b2-11eb-826f-a39084f8abb2.png)
+
 
 추가
 
@@ -36,7 +38,9 @@
 
 ##### 3. build.gradle 설정
 
-<img src="C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302195555140.png" alt="image-20210302195555140" style="zoom:80%;" />
+
+![intellij_인코딩3](https://user-images.githubusercontent.com/48197531/111123489-bd356c80-85b2-11eb-9d46-75270ead6dfd.png)
+
 
 추가
 
@@ -53,6 +57,6 @@ tasks.withType(JavaCompile) {
 
 ##### 4. Edit Configurations...
 
-<img src="C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302195106340.png" alt="image-20210302195106340" style="zoom:80%;" />
+![intellij_인코딩4](https://user-images.githubusercontent.com/48197531/111123507-c1618a00-85b2-11eb-87bc-c26249bd91c5.png)
 
-<img src="C:\Users\The Jeong\AppData\Roaming\Typora\typora-user-images\image-20210302195304795.png" alt="image-20210302195304795" style="zoom:80%;" />
+![intellij_인코딩5](https://user-images.githubusercontent.com/48197531/111123524-c6263e00-85b2-11eb-9048-45cf088c03a6.png)
