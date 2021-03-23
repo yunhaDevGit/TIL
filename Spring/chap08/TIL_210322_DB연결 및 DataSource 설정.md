@@ -94,3 +94,26 @@ org.apache.tomcat.jdbc.pool.DataSource : 커넥션 풀을 제공하는 DataSourc
 
 **커넥션 풀에 커넥션 반환 : 유휴(idle)**
 
+
+
+```JAVA
+@Bean(destroyMethod="close")
+public DataSource dataSource(){
+	DataSource ds = new DataSource();
+    ds.setDriverClassName("com.mysql.jdbc.Driver");
+    ds.setUrl("jdbc:mysql://localhost/spring5fs?characterEncoding=utf8");
+    ds.setUserName("spring5");
+    ds.setPassword("spring5");
+    ds.setInitialSize(2);
+    ds.setMaxActive(10);
+    ds.setTestWhileIdle(true); // 유휴 커넥션 검사
+    ds.setMinEvictableIdleTimeMillis(1000*60*3); // 최소 유휴 시간 3분
+    return ds;
+}
+```
+
+
+
+***커넥션 풀 사용 이유***
+
+- 매번 새로운 커넥션을 생성하면 그때마다 연결 시간이 소모된다 -> *성능적인 측면*
