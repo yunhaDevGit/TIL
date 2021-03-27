@@ -29,7 +29,9 @@ Spring Web : 웹과 관련된 어노테이션을 사용하기 위해
 
 > 머스테치 기본 폴더 : /src/main/resources/
 
-> view resolver 설정 : templates (prefix), mustache(suffix) 
+> view resolver 설정 : templates (prefix), mustache(suffix)   
+
++view resolver(뷰 리졸버) : 이름으로부터 실제로 사용할 뷰 객체를 결정해주는 애
 
 
 
@@ -61,12 +63,21 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create #create update none
+      ddl-auto: update #create update none
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
-
+#    pom.xml에 spring-boot-starter-data-jpa 의존성 추가 해주고
+#    application.yml에 jpa 설정해주면, db table을 자동으로 만들어준다
+#    > ddl-auto: create - table이 있다면, 지우고 다시 만든다
+#    > ddl-auto: update - table이 있다면, 거기에 업데이트
 ```
+
+ddl-auto : create -> 실행 시킬 때마다 새로 만든다. 만들어져 있다면 지우고 새로 만든다
+
+ddl-auto : update -> 실행 시킬 때 변화가 있다면 업데이트
+
+
 
 **index.html**
 
@@ -89,7 +100,7 @@ spring:
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller // view return
+@Controller // view를 return
 public class IndexController {
  // mustache 기본 폴더 src/main/resources/
  // view resolver : templates (prefix), .mustache (suffix) 생략가능
@@ -100,6 +111,8 @@ public class IndexController {
 
 }
 ```
+
+src/main/resources/templates 경로에 있는 index.html / index.mustache 파일을 리턴하겠다.
 
 
 
@@ -139,3 +152,5 @@ spring boot 실행
 최초 id : user
 
 최초 password : spring boot 실행 시 콘솔에 나오는 password 복사
+
+<img src="https://lh4.googleusercontent.com/NQRtvqz5ymxDFSSieRlANErPBlPPTcjGlGpwjVfEE3RgxcNchd_aAumd7uRB7-WcT2iGKfJM3ruh8G401OOyRc7AIxT7gDqLuCGIqTgIJeraZy54bSXiFUCZ1j_mW1ZaCLWebnLP" alt="img" style="zoom:80%;" />
