@@ -47,6 +47,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 
+**csrf(Cross Site Request Forgery)**
+
+- 사용자의 의지와는 무관한 수정/삭제/등록 등의 행위를 요청하는 것
+
+
+
 **.antMatchers()로 지정할 수 있는 항목**
 
 .authenticated()  : 인증된 사용자에게만 접근 허용

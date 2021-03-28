@@ -2,7 +2,7 @@
 
 **인증, 인가를 지원하고 주요 공격으로부터 어플리케이션을 보호해주는 프레임워크**
 
-**명령형과 리액티브 어플리케이션 모두에서 가장 잘 동작하는, 사실상 스프링 기반 어플리케이션표준이다**
+**스프링 기반의 어플리케이션 보안을 담당하는 프레임워크**
 
 
 
@@ -30,6 +30,52 @@
 *Spring Security에서 가장 중요한 역할을 하는 존재가 인증을 담당하는 AuthenticationManager이다*
 
 <img src="https://blog.kakaocdn.net/dn/bLM6OG/btqBAVuWc9N/ldFG9cNkFQIf42F7BNI6Hk/img.png" alt="img" style="zoom:80%;" />
+
+
+
+
+
+-------
+
+**@EnableWebSecurity**  (스프링 시큐리티 사용을 위한 어노테이션)
+
+- springSecurityFilterChain이 스프링 필터체인에 자동으로 등록된다
+
+
+
+
+SecurityFilterChain
+
+- 브라우저가 서버에 데이터를 요청하면 DispatcherServlet에 전달되기 전 여러 ServletFilter를 거치는데, 이때 Spring Security에 등록된 Filter를 이용해 사용자 보안 관련 처리를 진행한다
+- SpringSecurity와 관련된 filter는 연결된 여러 Filter들로 구성되어 있다.
+
+<img src="https://blog.kakaocdn.net/dn/nxFf7/btqBQ0W1aTh/k8pAMBk8K9Z1ayDQbmqcr0/img.png" alt="img" style="zoom:80%;" />
+
+- SecurityFilterChain
+  - UsernamePasswordAuthenticationFilter : ID와 Password 사용하는 Form 기반 유저 인증 처리
+  - LogoutFilter : 로그아웃 요청 처리
+  - SecurityContextPersisteceFilter : SecurityContextRepository에서 SecurityContext를 가져와 유저 Authentication에 접근할 수 있게 함
+  - ...
+
+
+
+### Spring Security 동작
+
+<img src="https://blog.kakaocdn.net/dn/dOIq8L/btqBOD2WeGT/C9iKmoa4EEKEOTQUJPTDl1/img.png" alt="img" style="zoom:80%;" />
+
+https://bamdule.tistory.com/52
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

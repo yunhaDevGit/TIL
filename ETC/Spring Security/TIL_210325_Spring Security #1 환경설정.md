@@ -17,7 +17,7 @@ Lombok : Getter, Setter, 생성자, Builder 패턴 사용하기 위해서
 
 Spring Data JPA : ORM 사용하기 위해서 쓴다
 
-MySQL Driver
+MySQL Driver : DB 연동을 위해
 
 Spring Security
 
