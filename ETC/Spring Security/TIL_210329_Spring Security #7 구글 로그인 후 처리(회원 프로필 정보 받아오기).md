@@ -79,26 +79,43 @@ public class PrincipleOauth2UserService extends DefaultOAuth2UserService {
 }
 ```
 
-spring security 설정 클래스에서  .userService(principleOauth2UserService) 설정을 해주게 되면principleOauth2UserService의 loadUser() 라는 함수에서 모든 후 처리가 수행된다. 
+spring security 설정 클래스에서  **.userService(principleOauth2UserService)** 설정을 해주게 되면principleOauth2UserService의 **loadUser**() 라는 함수에서 모든 **후 처리**가 수행된다. 
 
 (-> 구글로부터 받은 userRequest 데이터에 대한 후 처리를 해준다)
 
+
+
 **getClientRegistration** : ClientRegistration{registrationId='google', ...} 
+
+- registrationId로 어떤 OAuth로 로그인했는지 확인할 수 있다.
 
 **getAccessToken** : org.springframework.security.oauth2.core.OAuth2AccessToken@e25e5a98 
 
-**getAttributes** : {sub=104227030904767590535,  name=yunha,  given_name=yunha,  picture=https://lh3.googleusercontent.com/-mt1nPm36Zgw/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucnhZNe7hRJCoEJMuK6UFrADG7K-pA/s96-c/photo.jpg, [email=yunhadev98@gmail.com](mailto:email=yunhadev98@gmail.com),  email_verified=true,  locale=ko} 
+**getAttributes** : {sub=104227030904767590535,  name=yunha,  given_name=yunha,  picture=https://~.jpg, [email=yunhadev98@gmail.com](mailto:email=yunhadev98@gmail.com),  email_verified=true,  locale=ko} 
 
 
 
-username = 'google_104227030904767590535'
+> registration, token 정보가 userRequest 안에 있다
 
-password = '암호화(갯인데어)'
 
-email = yunhadev98@gmail.com
 
-role = 'ROLE_USER'
+**UserRequest 정보**
 
-provider = 'google'
+구글 로그인 버튼 클릭 -> 구글 로그인창 -> 로그인 완료 -> code를 리턴(OAuth-Client 라이브러리가 받는다) -> code를 통해 Access Token 요청  -> Access Token 리턴   `▶ UserRequest 정보`
 
-providerId = 104227030904767590535
+UserRequest 정보 -> loadUser() 메서드 호출 -> 구글로부터 회원 프로필 정보 받는다
+
+
+
+> username = 'google_104227030904767590535'
+>
+> password = '암호화(갯인데어)'
+>
+> email = yunhadev98@gmail.com
+>
+> role = 'ROLE_USER'
+>
+> provider = 'google'
+>
+> providerId = 104227030904767590535
+
