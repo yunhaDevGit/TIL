@@ -9,6 +9,7 @@
 ##### 1. File -> Setting -> Editor -> File Encodings
 
 ![intellij_인코딩0](https://user-images.githubusercontent.com/48197531/111124423-d854ac00-85b3-11eb-80dc-a1b94f64c779.png)
+
 ![intellij_인코딩](https://user-images.githubusercontent.com/48197531/111124429-d985d900-85b3-11eb-9a65-5e96b834c501.png)
 
 
@@ -23,6 +24,7 @@
 *Shift + Shift*  ->  vm 검색
 
 ![intellij_인코딩1](https://user-images.githubusercontent.com/48197531/111124464-e5719b00-85b3-11eb-88f2-52b95e09d91e.png)
+
 ![intellij_인코딩2](https://user-images.githubusercontent.com/48197531/111124472-e6a2c800-85b3-11eb-9bbd-7d6509820b00.png)
 
 
@@ -54,4 +56,5 @@ tasks.withType(JavaCompile) {
 ##### 4. Edit Configurations...
 
 ![intellij_인코딩4](https://user-images.githubusercontent.com/48197531/111124517-f0c4c680-85b3-11eb-8e59-a115159fdc8c.png)
+
 ![intellij_인코딩5](https://user-images.githubusercontent.com/48197531/111124527-f3bfb700-85b3-11eb-8241-21b878a5acde.png)
