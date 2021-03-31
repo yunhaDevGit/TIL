@@ -30,6 +30,10 @@
 
 :file_folder: Spring  ([Git](https://github.com/yunhaDevGit/spring5_programming.git))
 
+:file_folder: Spring Security  ([Git](https://github.com/yunhaDevGit/SpringSecurity.git))
+
+:file_folder: 정보처리기사
+
 :file_folder: ETC
 
 > :file_folder: Zookeeper
@@ -42,7 +46,5 @@
 
 > :file_folder: SQL
 
-> :file_folder: Spring Security  ([Git](https://github.com/yunhaDevGit/SpringSecurity.git))
 
-> :file_folder: 정보처리기사
 
