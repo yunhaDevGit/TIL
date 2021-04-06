@@ -1,4 +1,4 @@
-# CIA(Confidentiality Integrity Availability), RSA
+# CIA(Confidentiality Integrity Availability), RSA, RFC
 
 **정보보안 기본 원칙**
 
@@ -52,3 +52,21 @@ B가 할 과정
 4. (열린 후) B의 개인키로 열어본다
 
 *RSA 방식으로 인증, 보안 문제를 해결할 수 있다*
+
+
+
+# RFC
+
+https://jwt.io/introduction
+
+RFC라는 문서가 있다
+
+JWT는 RFC 7519라는 문서에 정의되어 있는 어떤 약속이다. 
+
+
+
+RFC란?
+
+- 통신을 하기 위한 약속된 규칙이 정의된 문서(프로토콜)
+- 인터넷 표준의 거의 항상 RFC로 문서화가 되어 있다. 
+- 새로운 규칙을 정의할 때 마다 뒤에 문서번호를 붙이는데 순서대로 부여된다.
