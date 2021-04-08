@@ -36,6 +36,8 @@
 
 :file_folder: 정보처리기사
 
+:file_folder: Troubleshooting
+
 :file_folder: ETC
 
 > :file_folder: Zookeeper
