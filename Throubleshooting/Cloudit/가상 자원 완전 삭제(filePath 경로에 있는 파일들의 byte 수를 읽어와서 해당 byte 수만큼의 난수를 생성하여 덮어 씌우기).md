@@ -48,9 +48,9 @@ public static CMD_RESULT deleteFolderComplete(String filePath) throws IOExceptio
 
 
 
-**:smile: 해결!!**
+#### **:smile: 해결!!**
 
-원인 : FileOutputStream은 데이터를 파일에 바이트 스트림으로 저장하기 위해 사용되는 클래스이다.
+**원인 : FileOutputStream은 데이터를 파일에 바이트 스트림으로 저장하기 위해 사용되는 클래스이다.**
 
 FileOutputStream(File file) 생성자는 주어진 File 객체가 가리키는 파일을 쓰기 위한 객체를 생성하는데, 만약 **기존의 파일이 존재할 경우, 그 내용을 지우고 새로운 파일을 생성**하기 때문에 위처럼 작성할 경우, **새로운 파일을 생성** 후 해당 파일의 바이트 수를 읽기 때문에 0으로 읽고, 아무런 값이 써지지 않았다. 
 
