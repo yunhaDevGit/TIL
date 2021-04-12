@@ -1,6 +1,6 @@
 # WebSocket
 
-기본적으로 웹은 HTTP/HTTPS 방식으로 동작하기 때문에 Stateless&Connectionless한 특징을 갖는다
+기본적으로 **웹**은 HTTP/HTTPS 방식으로 동작하기 때문에 Stateless&Connectionless한 특징을 갖는다
 
 ``` 
 - Connectionless : 클라이언트가 서버에 요청하고 서버가 클라이언트에게 응답하면 접속 끊는다
