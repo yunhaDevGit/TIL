@@ -50,5 +50,6 @@
 
 > :file_folder: SQL
 
+> :file_folder: Socket
 
 
