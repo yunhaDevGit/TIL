@@ -111,3 +111,9 @@ int index = colors.indexOf("white"); // 1
 index = colors.indexof("blue"); // -1
 ```
 
+
+
+
+
+참조 : https://psychoria.tistory.com/767
+
