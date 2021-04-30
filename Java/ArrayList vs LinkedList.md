@@ -119,3 +119,10 @@ ArrayList는 O(N)만큼의 연산 속도가 걸리기 때문에 자료의 최대
 >
 > **->** **다루고자 하는 데이터의 개수가 변하지 않는 경우라면, ArrayList가 최상의 선택이지만, 데이터의 개수의 변경이 잦다면 LinkedList를 사용하는 것이 더 낫다**
 
+
+
+
+
+참조 : https://shlee0882.tistory.com/95
+
+​		   https://www.nextree.co.kr/p6506/
