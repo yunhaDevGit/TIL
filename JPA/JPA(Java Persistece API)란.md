@@ -208,4 +208,88 @@ select 쿼리를 만들어서 JDBC API를 통해 DB에 보낸 후 결과를 받�
 
 
 
-14분
+
+
+### JPA의 성능 최적화 기능
+
+1. 1차 캐시와 동일성(identity) 보장
+
+   - 같은 트랜잭션 안에서는 같은 엔티티를 반환해준다 -> **약간의 조회 성능을 향상**시켜준다
+
+     - 비즈니스 레벨이 엄청 복잡할 때, 중간중간 똑같은 멤버를 조회하는 로직이 있을 수 있다. 이렇게 되면 똑같은 sql을 반복적으로 실행해야 한다.
+
+       JPA를 사용하면 **JPA의 캐싱기능을 통해 처음에만 sql을 실행하고, 다음부터는 메모리에 있는 값을 가지고 온다.**
+
+       ```java
+       String memberId = "100";
+       Member m1 = jpa.find(Member.class, memberId); // sql
+       Member m2 = jpa.find(Member.class, memberId); // 캐시
+       
+       println(m1==m2) // true
+       ```
+
+       ***sql은 한번만 실행한다***
+
+       
+
+2. 트랜잭션을 지원하는 쓰기 지원(transactional write-behind) - 버퍼링 기능
+
+   - 트랜잭션을 커밋할 때까지 INSERT SQL을 모은다
+
+     - JPA를 사용하여 옵션을 하나 키면 아래와 같이 사용할 수 있다.
+
+       ```java
+       transaction.begin(); // 트랜잭션 시작
+       
+       em.persist(memberA);
+       em.persist(memberB);
+       em.persist(memberC);
+       // 여기까지 INSERT SQL을 데이터베이스에 보내지 않는다
+       
+       // 커밋하는 순간 데이터베이스에 INSERT SQL을 모아서 보낸다
+       transaction.commit(); // 트랜잭션 커밋
+       ```
+
+       memberA, memberB, memberC가 들어오면 메모리에 쌓은 후 커밋되는 순간 세개가 같은 경우엔 쿼리 세개를 한번에 네트워크를 통해 보낸다.
+
+       
+
+   - JDBC BATCH SQL 기능을 사용하여 한번에 SQL 전송
+
+     - 코드가 지저분해진다.
+
+     
+
+3. 지연로딩(Lazy Loading)
+
+   - 지연 로딩 : 객체가 실제로 사용될 때 로딩
+
+     ```java
+     Member member = memberDao.find(memberId);  // select * from member
+     Team team = member.getTeam();
+     String teamName = team.getName(); // select * from team
+     ```
+
+     -> 네트워크를 두번 나가야 한다.
+
+     ***만약 member를 조회할 때 항상 team도 같이 조회해야 한다면 두번보다는 한번에 조회하는 것이 좋은것 아닌가?***
+
+     *A. 맞다! 이때는 JPA에서 member를 조회할 때 항상 team을 같이 가지고 오도록 옵션을 킨다*
+
+     
+
+     ***반면 member를 가지고 오다가 아주 가끔씩 team을 가지고 올 때, 그때는 지연로딩이 더 효과적이다***
+
+     
+
+   - 즉시 로딩 : JOIN SQL로 한번에 연관된 객체까지 미리 조회
+
+     ```java
+     Member member = memberDao.find(memberId); // select M.*, T.*
+     										  // from member
+     										  // join team ...
+     Team team = member.getTeam();
+     String teamName = team.getName();
+     ```
+
+     
