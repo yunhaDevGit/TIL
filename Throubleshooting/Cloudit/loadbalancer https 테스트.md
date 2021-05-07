@@ -90,3 +90,57 @@ $ lsof -i rcp:443
    파일 : private.key랑 privateCACert.pem 내용을 합친 httpsTest.pem 파일 업로드
 
 3. 멤버 서버 포트 : 443
+
+
+
+
+
+### 테스트
+
+##### 브라우저에서 요청
+
+```
+https://[로드밸런서 ip]:port
+```
+
+
+
+##### 터미널에서 요청
+
+```
+curl https://[로드밸런서 ip]:port --insecure
+```
+
+>--insecure (-k)
+>
+>curl은 기본적으로 https 사이트의 ssl 인증서를 검증한다. 인증 기간의 인증서 목록이 없거나, 모르는 기관에서 발급한 인증서의 경우 인증서 검증 에러를 발생시키고 동작을 중지한다.
+>
+>ex) curl https://192.168.120.132:55 로 요청시 아래와 같은 에러메시지가 발생한다.
+>
+>​     *curl: (60) Peer's certificate issuer has been marked as not trusted by the user.*
+>
+>​			또는
+>
+>​     *cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)*
+>
+>
+>
+>해결 방법
+>
+>1. 검증을 하지 않는 옵션을 준다. -k / --insecure
+>   - curl https://192.168.120.132:56 --insecure
+>2. 해당 인증서를 발급한 기관을 신뢰하는 인증 기관 목록에 추가한다
+>   - 해당 내용은 블로그 참고
+>   - https://www.lesstif.com/gitbook/curl-ca-cert-15892500.html
+
+
+
+
+
+참조
+
+https://jdh5202.tistory.com/601
+
+https://blog.lael.be/post/7147
+
+https://www.lesstif.com/gitbook/curl-ca-cert-15892500.html
