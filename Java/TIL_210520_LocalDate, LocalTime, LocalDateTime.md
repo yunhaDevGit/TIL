@@ -219,7 +219,43 @@ TemporalAdjuster 예제
 	    Long epochTime = 1621486881;
 	    LocalDate localdate = Instant.ofEpochMilli(Long.parseLong(epochTime))
 			    .atZone(ZoneId.systemDefault()).toLocalDate();
-		
+
+
+---
+### 날짜 변환
+LocalDate -> String
+
+    LocalDate.of(2021,5,20).formaat(DateTimeFormatter.BASIC_ISO_DATE);
+
+LocalDateTime -> String
+
+    LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+    
+LocalDate -> java.sql.Date
+
+    Date.valueOf(LocalDate.of(2021,5,20));
+
+LocalDateTime -> java.util.Date
+
+    Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant());
+
+String -> LocalDate
+
+    LocalDate.parse("2020-04-21");
+    LocalDate.parse("20200421",DateTimeFormatter.BASIC_ISO_DATE);
+
+String -> LocalDateTime
+
+    LocalDateTime.parse("2021-05-25T10:11:24");
+    LocalDateTime.parse("2021-05-25 12:40:22",DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+LocalDateTime -> LocalDate
+
+    LocalDate.from(LocalDateTime.now());
+
+LocalDate -> LocalDateTime
+
+    LocalDate.now().atTime(2,30);	
 
 참조 
 
