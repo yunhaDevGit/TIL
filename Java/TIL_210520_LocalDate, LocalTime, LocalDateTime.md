@@ -6,19 +6,19 @@ Java 8부터 java.time API를 사용할 수 있게 되었다.
 java.time은 Java 8 이상부터 사용할 수 있으니 참고하자!
 
 ## Calendar, Date 클래스의 문제점
-1. 상수필드 남용
+**1. 상수필드 남용**
 
    calendar.add(Calendar.SECOND,2)
 
-2. 헷갈리는 월 지정
+**2. 헷갈리는 월 지정**
    
    1월=0 2월=1 ... 
 
-3. 일관성이 없는 요일 상수
+**3. 일관성이 없는 요일 상수**
 
    Date.getDay()에서는 일요일이 0, Calendar.get(Calendar.DAY_OF_WEEK) 일요일이 1
 
-4. Date와 Calendar 객체의 역할분담
+**4. Date와 Calendar 객체의 역할분담**
 
    년/월/일 계산은 Date 클래스만으로는 부족해서 왔다갔다 하는 문제가 있다.
 
@@ -26,7 +26,7 @@ java.time은 Java 8 이상부터 사용할 수 있으니 참고하자!
 
    또한 Calendar 객체를 생성하고 Date 객체를 생성하는 프로세스를 거치기 때문에 번거롭고 생성비용이 싸다.
 
-6. 기타 java.util.Date 하위 클래스 문제
+**6. 기타 java.util.Date 하위 클래스 문제**
 
    - java.sql.Date 클래스의 상위 클래스인 java.util.Date와 클래스 이름이 같다
 
