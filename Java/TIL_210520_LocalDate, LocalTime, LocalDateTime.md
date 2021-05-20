@@ -16,7 +16,8 @@ java.time은 Java 8 이상부터 사용할 수 있으니 참고하자!
 
 **3. 일관성이 없는 요일 상수**
 
-    Date.getDay()에서는 일요일이 0, Calendar.get(Calendar.DAY_OF_WEEK) 일요일이 1
+    Date.getDay()에서는 일요일이 0
+    Calendar.get(Calendar.DAY_OF_WEEK) 일요일이 1
   
 **4. Date와 Calendar 객체의 역할분담**
 
