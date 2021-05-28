@@ -14,15 +14,15 @@ URI는 웹 서버가 리소스를 고유하게 식별할 수 있도록 하는 **
 
 <img src="https://blog.kakaocdn.net/dn/zbafq/btq4rzyE2Gn/6j1CvDXUvKA0823LrcBld0/img.png" alt="img" style="zoom:80%;" />
 
--   **URL(Uniform Resource Locator) **
+-   **URL(Uniform Resource Locator)**
     
     **자원의 위치.**특정 서버의 한 리소스에 대해 구체적인 위치를 서술한다.  
     
     특정한 정보 및 자료에 접근하는 데 있어서 네트워크 상의 주소를 말한다.  
     
-    **URL 표현 방법  **
+    **URL 표현 방법**
     
-    **scheme://host:port/url-path **
+    **scheme://host:port/url-path**
 
 ```
 ex) http://test.com
@@ -30,7 +30,7 @@ ex) http://test.com
     http://test.com/main?name=yunha&age=24
 ```
 
--   **URN(Uniform Resource Name) ** 
+-   **URN(Uniform Resource Name)** 
     
     **자원의 이름. **리소스가 어디에 있든 찾을 수 있는 방식이다.   
     
