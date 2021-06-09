@@ -18,6 +18,7 @@
 StringTokenizer는 단 한 개의 구분자만 사용할 수 있기 때문에 복잡한 형태의 구분자로 문자열을 나눠야 하는 경우, Scanner나 split을 사용해야 한다.
 
 
+
 #### 띄어쓰기를 기준으로 문자열 분리
 ```java
 import java.util.StringTokenizer;
@@ -31,6 +32,7 @@ public class Main{
 		System.out.println(st.nextToken()); // 사용법
 		System.out.println(st.nextToken()); // 알아보기
 ```
+
 
 #### 구분자를 기준으로 문자열 분리
 ```java
@@ -49,6 +51,7 @@ public class Main{
 이
 팅
 ```
+
 
 #### 구분자를 기준으로 문자열 분리(구분자 포함)
 ```java
@@ -69,6 +72,7 @@ public class Main{
 !
 팅
 ```
+
 
 ### BufferedReader와 함께 사용
 ```java
