@@ -8,7 +8,7 @@ git으로 소스 코드를 관리한다면, bash로 git 연습 후 사용하면 
 사실 오늘 이 글을 쓰게 된 이유는 회사에서 프로젝트를 하면서 각자 브랜치를 따고, merge를 하는 방식으로 진행을 하는데, 항상 push나 merge 하기 전, 부모 branch로부터 pull을 받고 rebase를 하는 방식을 써와서 그동안 history 관리에 큰 어려움이 없었다.
 그런데 오늘 수석님이 pull을 하기 전 push와 merge를 하면서 커밋 이력 그래프가 보기 힘들게 되어 그 부분을 도와 드리면서 아직 git에 대한 이해가 부족하다는 것을 알게 되었다.
 
-
+![image](https://user-images.githubusercontent.com/74949294/122542691-f3790100-d065-11eb-9329-bd9a045b0c17.png)
 
 
 git revert와 reset 모두 과거 커밋을 건드리는 작업이다.
