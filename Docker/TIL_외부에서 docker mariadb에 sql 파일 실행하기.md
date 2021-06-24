@@ -16,4 +16,5 @@ docker exec -it mariadb /bin/bash
 
 ### sql 파일 실행
 source /cloudit-database.sql;
+
 source [파일 경로]/[sql 파일 이름].sql;
