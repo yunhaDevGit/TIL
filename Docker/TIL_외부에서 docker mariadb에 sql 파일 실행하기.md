@@ -15,6 +15,8 @@ docker cp [sql 파일 이름].sql [컨테이너 ID]:/[sql 파일 이름].sql
 docker exec -it mariadb /bin/bash
 
 ### sql 파일 실행
+mysql -u[계정] -p[패스워드]
+
 source /cloudit-database.sql;
 
 source [파일 경로]/[sql 파일 이름].sql;
