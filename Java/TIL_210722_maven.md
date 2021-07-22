@@ -36,7 +36,8 @@
 #### 1) settings.xml
 - 메이븐 빌드 툴과 관련한 설정파일
 - MAEN_HOME/conf 디렉토리에 위치
-- 
+
+
 -> 메이븐을 빌드할 때 의존 관계에 있는 라이브러리, 플러그인을 중앙 저장소에서 개발자 PC로 다운로드 하는 위치(로컬 저장소)의 기본 설정은 '~/.m2/repository', 'USER_HOME/.m2/repository' 인데 setting.xml에 원하는 로컬 저장소의 경로를 지정, 변경 할 수 있다
 
 
