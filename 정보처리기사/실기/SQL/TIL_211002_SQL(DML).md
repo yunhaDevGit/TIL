@@ -84,6 +84,67 @@ FROM 테이블명[, 테이블명]
 
 
 
+#### 그룹함수
+
+- COUNT, SUM, AVG, MAX, MIN, STDDEV(그룹별 표준편차), VARIANCE(그룹별 분산), ROLLUP, CUBE
+
+
+
+#### WINDOW 함수
+
+- ROW_NUMBER() : 윈도우별 각 레코드에 대한 일련번호 반환
+- RANK() : 윈도우별 순위 반환, 공동 순위를 반영
+- DENSE_RANK() : 윈도우별 순위 반환, 공동 순위 무시하고 부여
+
+[상여금] 테이블에서 '상여내역' 별로 '상여금'에 대한 일련 번호를 구하시오.(순서 내림차순, 속성명 NO)
+
+```SQL
+SELECT 상여내역, 상여금
+	ROW_NUMBER() OVER (PARTITION BY 상여내역 ORDER BY 상여금 DESC) AS NO
+FROM 상여금;
+```
+
+
+
+#### GROUP BY
+
+- [상여금] 테이블에서 부서별 튜플수 검색
+
+  ```SQL
+  SELECT 부서 COUNT(*) AS 사원수
+  FROM 상여금
+  GROUP BY 부서;
+  ```
+
+- [상여금] 테이블에서 '상여금'이 100 이상인 사원이 2명 이상인 '부서'의 튜플 수
+
+  ```SQL
+  SELECT 부서,COUNT(*) AS 사원수
+  FROM 상여금
+  WHERE 상여금 >= 100
+  GROUP BY 부서
+  HAVING COUNT(*)>=2;
+  ```
+
+
+
+#### 집합 연산자
+
+- UNION : 두 SELECT문 조회 결과 통합하여 출력(중복 제거)
+- UNION ALL : 두 SELECT문 조회 결과 통합하여 출력(중복 허용)
+- INTERSECT :두 SELECT문의 조회 결과 중 공통된 행만 출력
+- EXCEPT : 첫번쨰 SELECT문의 조회 결과에서 두번째 SELECT문의 조회 결과를 제외한 행 출력
+
+[사원] 테이블과 [직원] 테이블에 공통으로 존재하는 레코드만 통합
+
+```SQL
+SELECT * FROM 사원
+UNION
+SELECT * FROM 직원;
+```
+
+
+
 **EXAMPLE**
 
 - [사원] 테이블에서 '주소'만 검색하되 같은 주소는 한번만 출력하시오
