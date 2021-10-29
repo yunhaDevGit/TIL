@@ -117,4 +117,26 @@ Kafka는 분산 시스템에 대한 외부 커밋 로그 역할을 할 수 있�
 기본 배포판 외에 Kafka와 연동되는 많은 tool이 있습니다. 
 
 
+## APIS
+
+### Producer API
+- Producer API는 Kafka cluster에 있는 topic에 데이터 스트림을 전송하는 API를 제공합니다. 
+
+
+### Consumer API
+- Consumer API는 Kafka cluster의 topic에 있는 데이터 스트림을 읽어오는 API를 제공합니다. 
+
+
+### Stream API
+- Stream API는 데이터 스트림을 input topic에서 output topic으로 변환하는 API를 제공합니다. 
+- Kafka Stream은 입력 및 출력 데이터가 Kafka 클러스터에 저장되는 애플리케이션 및 마이크로서비스를 구축하기 위한 클라이언트 라이브러리입니다. 
+
+
+### Connect API
+- Connect API는 일부 데이터 시스템에서 Kafka로 지속적으로 가져오거나 Kafka에서 일부 연결된 데이터 시스템에 push 하는 connector 구현하는 API를 제공합니다. 
+- 사용자들은 이 API를 직접 사용할 필요 없이 미리 빌드 된 connector를 사용할 수 있습니다. 
+
+
+### Admin API
+- Admin API는 topic, broker, acl과 다른 kafka 객체들을 관리 및 검사하는 API를 제공합니다. 
 
