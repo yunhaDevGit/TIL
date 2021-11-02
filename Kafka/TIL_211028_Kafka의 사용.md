@@ -1,4 +1,3 @@
-
 ### Event Streaming
 event streaming은 데이터 베이스나 모바일 기기, 클라우드 서비스와 같은 이벤트 소스에서 event stream 형태로 실시간으로 데이터를 캡쳐 하는 방법입니다.  또한 이 event stream은 나중에 검색할 수 있도록 영구적으로 저장합니다. 실시간으로 event stream에 대한 조작 및 처리, 대응합니다. 또한 event stream을 필요에 따라 각각 다른 목적지로 라우팅 해줍니다. 
 Event streaming은 데이터의 지속적인 흐름과 해석을 보장하여 올바른 정보가 적절한 시간에 올바른 위치에 있도록 합니다. 
