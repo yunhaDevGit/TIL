@@ -1,34 +1,37 @@
 # Kakfa Consumer
 
-컨슈머는 보통 카프카 컨슈머 API와 그것으로 구성된 애플리케이션을 말합니다. 
-일반적으로 컨슈머가 토픽을 구독(Subscribe) 혹은 읽는다(Read)고 하는데, 이는 컨슈머가 토픽 파티션에 저장된 메시지들을 가져오는 것을 말합니다. 
-컨슈머의 3가지 특징은 다음과 같습니다. 
+컨슈머는 보통 카프카 컨슈머 API와 그것으로 구성된 애플리케이션을 말합니다. \
+일반적으로 컨슈머가 토픽을 구독(Subscribe) 혹은 읽는다(Read)고 하는데, 이는 컨슈머가 토픽 파티션에 저장된 메시지들을 가져오는 것을 말합니다. \
+컨슈머의 3가지 특징은 다음과 같습니다. \
 - Polling 구조
 - 단일 토픽의 멀티 커슈밍
 - 컨슈머 그룹
 
 ### Polling 구조
-일반적으로 다른 메시징 큐는 메시지 큐에서 메시지를 push하는데, 카프카는 컨슈머가 브로커로부터 메시지를 pull 해옵니다. 
-push 방식의 가장 큰 단점은 메시지 큐가 컨슈머 측의 성능도 염두해야 합니다. 즉, 메시지 큐가 컨슈머로 메시지를 push 할 때, '이 정도는 할 수 있겠지'라고 컨슈머의 환경을 고려해야 합니다.
-하지만 컨슈머가 브로커로부터 메시지를 요청하는 polling 구조는, **컨슈머가 자신이 원하는 만큼 브로커로 메시지를 요청합니다. ** 이러한 구조의 가장 큰 장점은 각 컨슈머가 자신의 환경에 메시지 구독 성능을 최적화 할 수 있다는 것입니다. 추가로 브로커는 컨슈머가 요청하는 만큼 메시지를 전달하면 되기 때문에 더 이상 컨슈머의 환경을 고려할 필요가 없습니다. 
+일반적으로 다른 메시징 큐는 메시지 큐에서 메시지를 push하는데, 카프카는 컨슈머가 브로커로부터 메시지를 pull 해옵니다. \
+push 방식의 가장 큰 단점은 메시지 큐가 컨슈머 측의 성능도 염두해야 합니다. 즉, 메시지 큐가 컨슈머로 메시지를 push 할 때, '이 정도는 할 수 있겠지'라고 컨슈머의 환경을 고려해야 합니다.\
+하지만 컨슈머가 브로커로부터 메시지를 요청하는 polling 구조는, **컨슈머가 자신이 원하는 만큼 브로커로 메시지를 요청합니다.** 이러한 구조의 가장 큰 장점은 각 컨슈머가 자신의 환경에 메시지 구독 성능을 최적화 할 수 있다는 것입니다. 추가로 브로커는 컨슈머가 요청하는 만큼 메시지를 전달하면 되기 때문에 더 이상 컨슈머의 환경을 고려할 필요가 없습니다. 
 
 
 ### 단일 토픽의 멀티 컨슈밍
+
 ![](https://blog.kakaocdn.net/dn/b9eWpo/btqDlj3DA5O/z16PGBflaS8bJyg9dMnbV0/img.png)
 
-카프카 컨슈밍의 또 다른 특징 중 하나는 **하나의 토픽에 서로 다른 컨슈머 애플리케이션이 동시에 구독할 수 있다는 것입니다. ** 이렇게 단일 토픽에 대해 멀티 컨슈밍이 가능한 이유는 컨슈머가 메시지를 읽을 때 브로커의 메시지가 삭제되는 것이 아니기 때문입니다. 대신 **각 컨슈머가 어느 토픽 파티션의 어느 오프셋까지 읽어갔는 지를 컨슈머 오프셋이라는 토픽에 저장합니다.**
+카프카 컨슈밍의 또 다른 특징 중 하나는 **하나의 토픽에 서로 다른 컨슈머 애플리케이션이 동시에 구독할 수 있다는 것입니다.** 이렇게 단일 토픽에 대해 멀티 컨슈밍이 가능한 이유는 컨슈머가 메시지를 읽을 때 브로커의 메시지가 삭제되는 것이 아니기 때문입니다. 대신 **각 컨슈머가 어느 토픽 파티션의 어느 오프셋까지 읽어갔는 지를 컨슈머 오프셋이라는 토픽에 저장합니다.**\
 컨슈머 오프셋을 통해 **컨슈머 애플리케이션이 중단되었다가 다시 시작될 경우 자신이 어디서부터 메시지를 읽어야 하는지 알 수 있습니다.** 즉, 컨슈머 상태와 관계없이 안정적인 메시지 구독이 가능해집니다.
 
 
 ### 컨슈머 그룹
-브로커는 성능을 위해 하나의 토픽을 여러 파티션으로 병렬 구성하여 처리합니다. 하지만 둘 이상의 파티션을 하나의 컨슈머로만 처리한다면 성능상의 문제가 발생할 수 있습니다. 
+브로커는 성능을 위해 하나의 토픽을 여러 파티션으로 병렬 구성하여 처리합니다. 하지만 둘 이상의 파티션을 하나의 컨슈머로만 처리한다면 성능상의 문제가 발생할 수 있습니다. \
 그래서 카프카 컨슈머는 **하나 이상의 컨슈머가 컨슈머 그룹을 구성하여 토픽을 구독할 수 있습니다.**
+
 ![](https://blog.kakaocdn.net/dn/bWRQzO/btqDmnYJpx4/cJmkH1kfJoGm2FrFrMk7O1/img.png)
 
 
 ## 컨슈머 동작 원리
 
 ![](https://blog.kakaocdn.net/dn/cuLxkJ/btrb6TpGA8W/rMNm7d7ThbVdBJ8t9cvlkK/img.png)
+
 Kafka Consumer 구조
 
 |구성요소| 역할 |
@@ -41,7 +44,7 @@ Kafka Consumer 구조
 
 
 **ConsumerCoordinator**
-ConsuemerCoordinator는 컨슈머 rebalance, offset 초기화, offset 커밋을 담당합니다.
+ConsuemerCoordinator는 컨슈머 rebalance, offset 초기화, offset 커밋을 담당합니다.\
 ConsumerCoordinator 내부에 heartbeat 스레드가 존재해 주기적으로 heartbeat를 GroupCoordinator에게 전송합니다.
 
 
@@ -62,7 +65,7 @@ ConsumerCoordinator 내부에 heartbeat 스레드가 존재해 주기적으로 h
 
 ![](https://blog.kakaocdn.net/dn/bQ15su/btrb8262vHC/wMEnmUuKnx3K84kvs1KNW0/img.png)
 
-max.partition.fetch.bytes와 fetch.min.bytes 설정을 통해 consumer가 얼만큼의 데이터를 가져올 것인지 설정하여 데이터를 가져오게 됩니다.
+max.partition.fetch.bytes와 fetch.min.bytes 설정을 통해 consumer가 얼만큼의 데이터를 가져올 것인지 설정하여 데이터를 가져오게 됩니다.\
 fetch.min.bytes의 기본 설정은 1byte며 max.partition.fetch.bytes의 기본 설정은 1mebibytes입니다.
 
 또한 max.poll.records 설정을 통해 데이터를 가져오는 Record 개수를 설정할 수 있습니다. (default : 500개)
@@ -73,21 +76,21 @@ fetch.min.bytes의 기본 설정은 1byte며 max.partition.fetch.bytes의 기본
 ### HeartBeatThread
 HeartBeatThread는 background에서 동작하며 Coordinator에게 살아있음을 알립니다.
 
-기존에는 Kafka Consumer가 데이터 프로세싱 하는 것을 기반으로 살아있고, 죽었음을 판단했었는데
+기존에는 Kafka Consumer가 데이터 프로세싱 하는 것을 기반으로 살아있고, 죽었음을 판단했었는데\
 **데이터 프로세싱과 Health Check를 같이 하니, 데이터 프로세싱이 길어지면 Consumer가 살았는지 죽었는지 즉각 확인할 수 없는 이슈** 때문에 별도의 Thread를 유지하게 되었습니다.
 
 핵심은 ***데이터 프로세싱 부분과  Consumer 생존 여부를 알리는 부분을 분리*** 한 것입니다.
 
 
 ### Rebalancing
-HeartBeat를 토대로 Consumer 생존(?) 여부에 대해 판단 후 Consumer 개수가 변하면 Rebalancing이 이뤄집니다.
+HeartBeat를 토대로 Consumer 생존(?) 여부에 대해 판단 후 Consumer 개수가 변하면 Rebalancing이 이뤄집니다.\
 또한 Topic에 변경 사항이 생긴다면 마찬가지로 Rebalancing이 이뤄집니다.
 
 
 ## Consumer Config
 
 - group.id 
-	- 컨슈머 그룹을 식별하는 고유 id입니다. 메시지를 전송할 때 지정하는 topic 이름과 다릅니다.
+	- 컨슈머 그룹을 식별하는 고유 id입니다. 메시지를 전송할 때 지정하는 topic 이름과 다릅니다.\
 	- zookeeper에서는 각 그룹의 메시지 offset을 관리하는데 그룹 id가 같으면 offset 값 또한 공유됩니다.
 
 - bootstrap.servers
