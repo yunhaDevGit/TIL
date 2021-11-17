@@ -4,7 +4,7 @@ spring-kafka 라이브러리를 사용하여 multi-module 구성으로 kafka pro
 
 모듈은 다음과 같이 kafka-common, kafka-producer, kafka-consumer 세 가지로 구성되어 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b7fa1185-a275-4e47-b3f5-42b0670e4dcf/Untitled.png)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b7fa1185-a275-4e47-b3f5-42b0670e4dcf/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211117%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211117T012939Z&X-Amz-Expires=86400&X-Amz-Signature=f00750007e6cd1481163c806c1fab5547355ae4b5dca4b741e28bfe3a7b216db&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 kafka-common은 parent module로 다른 하위 module에 포함됩니다. 
 
@@ -28,7 +28,7 @@ kafka-consumer
 
 그 과정에서 Producer에서 토픽(파티션)에 message를 publish 하는 것까지는 정상적으로 잘 되었으나, Consumer에서 messgae를 소비할 때 'This error handler cannot process 'SerializationException's directly' 에러가 발생했다. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/449fca9d-45fe-4ce5-b368-3045a8d5e60a/Untitled.png)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/449fca9d-45fe-4ce5-b368-3045a8d5e60a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211117%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211117T012920Z&X-Amz-Expires=86400&X-Amz-Signature=0e4631665f78962441f7302d2140b18dbcc4f1b343788b1e1ec7ee96093cc1f8&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 해당 에러 메시지 뒤에 'please consider configuring an 'ErrorHandlingDeserializer' in the value and/or key deserializer' 라고 **ErrorHandlingDeserializer** 설정을 하라고 나와 있어 아래와 같이 설정해주었다. 
 
@@ -94,8 +94,8 @@ org.springframework.kafka.listener.ListenerExecutionFailedException: Listener fa
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_272]
 	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_272]
 ```
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/195b49d2-2cb4-4ad1-8da1-8def4c1d0b9c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211117%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211117T013006Z&X-Amz-Expires=86400&X-Amz-Signature=519c75d626f80ff8aae370a8b564deeeaee12c8ff135f04fa719aa846a2d3cbc&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/195b49d2-2cb4-4ad1-8da1-8def4c1d0b9c/Untitled.png)
 
 '\~failed to deserialize\~ The class 'io.kafka.cloud.kafkaproducer.dto.VmDto' is not in the trusted packages' 라는 메시지를 본 후 message를 publish 할 때 kafka-producer 패키지의 VmDto를 사용해서 메시지가 나온 것 같아, 우선 kafka-common의 Vm entity를 사용하여 publish/consume 하도록 수정해보았다. 
 
@@ -189,8 +189,8 @@ message publish/consume 할 때 전달 객체(?)를 kafka-common 모듈의 Vm으
 
 실행 결과
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3f583e5f-cbbe-44d5-9e04-70d98de32a9b/Untitled.png)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3f583e5f-cbbe-44d5-9e04-70d98de32a9b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211117%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211117T013018Z&X-Amz-Expires=86400&X-Amz-Signature=96c84788e3acbb8d79a8de571ef54bd8fc7e1f6a7c2a75207e86ece1e7f91aa9&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0e4c9059-a60c-4afa-a6aa-a7cfb3c32e42/Untitled.png)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0e4c9059-a60c-4afa-a6aa-a7cfb3c32e42/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211117%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211117T013030Z&X-Amz-Expires=86400&X-Amz-Signature=e1d81c1aee0a4132721481ee464743b86a4b8697dc081e5c973cafc6e4d8b693&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 그러나 나는 다른 모듈로 전달 할 때 dto를 사용하고 싶으므로 조금 더 찾아봐야 할 것 같다.
