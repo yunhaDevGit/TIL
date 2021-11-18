@@ -126,7 +126,7 @@ public class Vm {
 
 ---
 
-## 
+## 해결 !!
 
 원인 파악을 계속 못하고 있던 중 회사 선배가 같이 봐주셨다~
 
@@ -134,7 +134,7 @@ public class Vm {
 
 그러다가 설마 하고 build.gradle을 보시곤 lombok dependency 추가할 때 잘못 된 것 같다고 하고 아래와 같이 바꿔주셨다.
 
-```json
+```java
 // 기존에 작성되었던 build.gradle
 implementation 'org.projectlombok:lombok:1.18.20'
 
