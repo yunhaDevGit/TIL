@@ -1,5 +1,10 @@
 # Kafka 명령어
 
+
+```
+kafka 위치 - docker/kafka_2.12-2.5.0/
+```
+
 ### Topic list 확인 명령어
 
 ```bash
