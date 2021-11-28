@@ -36,3 +36,6 @@ vi {kafka 위치}/config/server.properties
 
 delete.topic.enable = true
 ```
+
+
+## kafka producer 명령어
