@@ -31,7 +31,7 @@ VmDto vmDto = (VmDto) jsonObject;
 
 위와 같이 구현하니 다음과 같은 에러 메시지와 함께 build가 되지 않았다. 
 
-Inconvertible types; cannot cast 'org.json.JSONObject' to 'io.kafka.cloud.kafkacommon.dto.VmDto'
+> Inconvertible types; cannot cast 'org.json.JSONObject' to 'io.kafka.cloud.kafkacommon.dto.VmDto'
 
 JSONObject는 DTO class와 바로 매핑되지 않나보다.
 
