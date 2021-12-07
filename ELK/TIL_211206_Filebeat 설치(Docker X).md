@@ -8,13 +8,13 @@ ELK에서 로그를 수집하기 위해 filebeat을 에이전트 노드에 설�
 wget {다운로드 경로}
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f76adf55-5b48-4551-8e5e-120c6e5ef3e6/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f76adf55-5b48-4551-8e5e-120c6e5ef3e6/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211207%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211207T113134Z&X-Amz-Expires=86400&X-Amz-Signature=853690039a1bd9395a98943118c14975b879e33bacc6d8a246d0c3a8ca9feb0f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 ```bash
 rpm -ivh {다운로드 된 rpm file}
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4cb1d01f-e774-4113-85a3-a5076ef57660/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4cb1d01f-e774-4113-85a3-a5076ef57660/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211207%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211207T113155Z&X-Amz-Expires=86400&X-Amz-Signature=0ca987188467807d099857549d172ed9ccd386d0f518a5acf1b5883321c99aed&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 ## filebeat 설정
 
@@ -22,7 +22,7 @@ rpm -ivh {다운로드 된 rpm file}
 
 (아래는 중요한 설정에 대해서만 보여준다)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dd9daa04-fc5f-49a6-b8ee-a8dfdb5f993f/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/dd9daa04-fc5f-49a6-b8ee-a8dfdb5f993f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211207%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211207T113217Z&X-Amz-Expires=86400&X-Amz-Signature=f19c78790d0e5026f815203f3bf9ed6319cf4883fbd048b008e93ed233f2e2a5&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 → 위의 설정 정보가 담기면 된다....
 
@@ -111,7 +111,7 @@ filebeat modules list
 
 위의 command를 사용하여 설치 이후 활성화된 모듈과 비활성화 된 모듈을 확인할 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/643f3d20-ac23-4d23-924c-21b99e6fed5a/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/643f3d20-ac23-4d23-924c-21b99e6fed5a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211207%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211207T113236Z&X-Amz-Expires=86400&X-Amz-Signature=e8751285e98f80df5b16b81344b93d5aa7d6b056e72cf5c13d355cfabf9059a0&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 ### 모듈 활성화
 
