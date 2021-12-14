@@ -31,25 +31,25 @@ $ docker pull telegraf
     ```
     
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3165f4fb-7d1b-4c97-bdf1-0c9aecfdf533/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211209%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211209T025332Z&X-Amz-Expires=86400&X-Amz-Signature=39a7ac278318f2f5a85b7fb01d694c00363861617d4a97709e82a7d56de095df&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3165f4fb-7d1b-4c97-bdf1-0c9aecfdf533/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211214T015337Z&X-Amz-Expires=86400&X-Amz-Signature=b73844371625abc92f94cc46a778ced1784cc1f4f424754328a48aaee356a027&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 3. influxdb 컨테이너 실행 및 설정
     
     3.1 influxdb 컨테이너 실행
     
 
-  ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a4e99d89-5ae6-4a0f-a7a6-4aa2698a725a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211209%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211209T025343Z&X-Amz-Expires=86400&X-Amz-Signature=175f5044c92bd21403c1c07cdfa28ff80a817d8f5cd7d7122decd1887418e178&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+  ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a4e99d89-5ae6-4a0f-a7a6-4aa2698a725a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211214T015345Z&X-Amz-Expires=86400&X-Amz-Signature=6851d871fcad7cecc4df605c22150a67d6c98532063c1dd147f65c2eced0fe4b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
   3.2 influxdb UI 접속
 
   `http://localhost:8086`
 
-  ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/46914bf0-8dd1-4ba2-9755-45970a5e3b14/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211209%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211209T025352Z&X-Amz-Expires=86400&X-Amz-Signature=8cfefe57ccb306b43809d247da3daa76843ee9a01f284415dbbe8fcd4684e3cd&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+  ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/46914bf0-8dd1-4ba2-9755-45970a5e3b14/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211214T015355Z&X-Amz-Expires=86400&X-Amz-Signature=5b97467b2dab6b890b923d8ec87a33e6f587d6c57012b7ff228037b6cfbe715e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
   
   3.3 초기 설정 (user, password, organization, bucket)
 
-  ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ec8bae6c-16d4-49f9-9e33-469ea92bc7bf/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211209%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211209T025403Z&X-Amz-Expires=86400&X-Amz-Signature=4fe6d9bf5bd59adc4d710b3d51c0f0b53219a3baea47d349da794dc0b2d56814&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+  ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ec8bae6c-16d4-49f9-9e33-469ea92bc7bf/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211214%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211214T015403Z&X-Amz-Expires=86400&X-Amz-Signature=7f1a2051809e03d683f6599961d8bbd3de71dda20ce559e1443b2335cb44df6a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
   
   3.4 Telegraf Configuration 생성
