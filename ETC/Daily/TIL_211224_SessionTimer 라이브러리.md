@@ -12,13 +12,12 @@ Idle Timeout은 사용자 또는 클라이언트가 Web Application에서 비활
 
 
 ### 사용 이유?
-보안상의 이유로 API에 대한 불필요한 호출을 피하기 위해 Idle Timer가 필요합니다. 
+보안상 비인가자의 악의적인 공격을 피할 수 있다. 
 
-React Idle Timer를 사용하지 않을 경우,  backend API를 매 초 또는 30초마다 하게 됩니다.  
-
-React Idle Timer를 사용할 경우불필요한 API call을 피할 수 있습니다. 
+React Idle Timer를 사용할 경우 불필요한 API call을 피할 수 있다. 
 
 물론 기존의 방식처럼 API call을 통한 session timer 기능을 구현할 수 있지만 React Idle Timer를 사용할 경우 쉽고 간단하게 구현할 수 있을 뿐만 아니라 다양한 옵션도 제공합니다. 
+
 
 
 ### Idle Timer에서 제공하는 옵션
