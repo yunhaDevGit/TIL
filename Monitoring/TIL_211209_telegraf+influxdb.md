@@ -8,7 +8,7 @@ $ docker pull influxdb:2.1.1
 $ docker pull telegraf
 ```
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ee17b284-c5e5-4a48-a212-06e14e515eb3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211228T061225Z&X-Amz-Expires=86400&X-Amz-Signature=8dc1a68b57e80d2717cf366a43728a472daaefaff4054fda2d561210d95d3c70&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ee17b284-c5e5-4a48-a212-06e14e515eb3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220107%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220107T020434Z&X-Amz-Expires=86400&X-Amz-Signature=476d32bb9bebe9f09d76c1f2fe08f3d0f2e8db03c9b39ff31c103987c6efce06&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 2. docker network create (bridge 생성)
 
