@@ -65,4 +65,5 @@ Client가 Websocket connection을 맺을 경우 “connect” 메세지가 conne
 
 ### References
 [1] [https://velog.io/@tlatldms/Spring-Boot-STOMP-JWT-Socket-인증하기#handshakeinterceptor-vs-channelinterceptor](https://velog.io/@tlatldms/Spring-Boot-STOMP-JWT-Socket-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0#handshakeinterceptor-vs-channelinterceptor)
+
 [2] [https://gompangs.tistory.com/entry/Spring-boot-Websocket-connect-disconnect-관련](https://gompangs.tistory.com/entry/Spring-boot-Websocket-connect-disconnect-%EA%B4%80%EB%A0%A8)
