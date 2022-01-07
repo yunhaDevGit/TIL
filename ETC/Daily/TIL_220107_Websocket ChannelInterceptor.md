@@ -60,8 +60,9 @@ public class StompHandler implements ChannelInterceptor {
 
 Client가 Websocket connection을 맺을 경우 “connect” 메세지가 connection을 끊을 경우 “disconnect” 메시지를 console에 출력한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9476ccec-49cf-4c23-9d90-510a20c368d1/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9476ccec-49cf-4c23-9d90-510a20c368d1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220107%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220107T024016Z&X-Amz-Expires=86400&X-Amz-Signature=14fb4c0826adb1d113392cb947ad7cd0d89164f748ee086c00abdff4d4876435&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
-[https://velog.io/@tlatldms/Spring-Boot-STOMP-JWT-Socket-인증하기#handshakeinterceptor-vs-channelinterceptor](https://velog.io/@tlatldms/Spring-Boot-STOMP-JWT-Socket-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0#handshakeinterceptor-vs-channelinterceptor)
 
-[https://gompangs.tistory.com/entry/Spring-boot-Websocket-connect-disconnect-관련](https://gompangs.tistory.com/entry/Spring-boot-Websocket-connect-disconnect-%EA%B4%80%EB%A0%A8)
+### References
+[1] [https://velog.io/@tlatldms/Spring-Boot-STOMP-JWT-Socket-인증하기#handshakeinterceptor-vs-channelinterceptor](https://velog.io/@tlatldms/Spring-Boot-STOMP-JWT-Socket-%EC%9D%B8%EC%A6%9D%ED%95%98%EA%B8%B0#handshakeinterceptor-vs-channelinterceptor)
+[2] [https://gompangs.tistory.com/entry/Spring-boot-Websocket-connect-disconnect-관련](https://gompangs.tistory.com/entry/Spring-boot-Websocket-connect-disconnect-%EA%B4%80%EB%A0%A8)
