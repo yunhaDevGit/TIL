@@ -10,6 +10,23 @@ monitoring 페이지에 접속 했을 때, InfluxDB에 담긴 정보를 10초 �
 
 WebSocketHandler 안에 handelMessage 메소드가 있지만 HandshakeInterceptor에서 CONNECT / DISCONNECT 프레임을 직접 가지고 올 수 없다. 
 
+
+### ChannelInterceptor Method
+
+- afterReceiveCompletion(Message<?> message, MessageChannel channel, Exception ex)
+    - 수신 완료 후 리소스 정리가 제대로 이루어질 수 있도록 발생한 예외에 관계없이 호출
+- afterSendCompletion(Message<?> message, MessageChannel channel, boolean sent, Exception ex)
+    - 전송 완료 후 리소스 정리가 제대로 이루어질 수 있도록 발생한 예외에 관계없이 호출
+- postReceive(Message<?> message, MessageChannel channel)
+    - 메시지가 검색된 후 호출자에게 반환 되기 전에 즉시 호출
+- postSend(Message<?> message, MessageChannel channel, boolean sent)
+    - 송신 호출 직후에 호출
+- preReceive(MessageChannel channel)
+    - 수신이 호출되는 즉시 그리고 메시지가 실제로 검색되기 전에 호출
+- preSend(Message<?> message, MessageChannel channel)
+    - 메시지가 실제로 채널에 전송되기 전에 호출
+
+
 ### ChannelInterceptor 구현
 
 ChannelInterceptor를 사용하기 위해 `WebSocketMessageBrokerConfigure`의 `configureClientInboundChannel` 메소드를 오버라이드 해 Registration에 인터셉터를 추가한다. 
