@@ -8,7 +8,7 @@ $ docker pull influxdb:2.1.1
 $ docker pull telegraf
 ```
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ee17b284-c5e5-4a48-a212-06e14e515eb3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220107%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220107T020434Z&X-Amz-Expires=86400&X-Amz-Signature=476d32bb9bebe9f09d76c1f2fe08f3d0f2e8db03c9b39ff31c103987c6efce06&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![](https://lh6.googleusercontent.com/M54VppweyhcRCH3rKcCOMYr7uKFbXjAiuXdGZAzZIQ3F7XOQWHTl9XvAhMZKI9sGNtj1F8MR642Qs00kuqA5NYNCV9aPAbcR6VTZfKQqsCjTOglFFsajJ7YV-2VfxKQ8O-x7KM0j)
 
 2. docker network create (bridge 생성)
 
@@ -31,69 +31,70 @@ $ docker pull telegraf
     ```
     
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3165f4fb-7d1b-4c97-bdf1-0c9aecfdf533/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211228T061247Z&X-Amz-Expires=86400&X-Amz-Signature=3ec3ed75a6c49e6288bd4640873cff5c00b9b40fe92c2fee5aa38cec85bafc1b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![](https://lh6.googleusercontent.com/t0H3Z2KxE0hsTetvoVvw-M0nL9APpHsm-nZ0DF-2yx56Mu8R2p4VcKrKj30eEhaKGarZF9-aU6XVj23hhqwt5Ba-Fk8sKwSCswPQEruq94RB0EXwTBtkEBrQ9PhEyFjVasWYcHQ3)
 
 3. influxdb 컨테이너 실행 및 설정
     
     3.1 influxdb 컨테이너 실행
     
 
-  ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a4e99d89-5ae6-4a0f-a7a6-4aa2698a725a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211228T061302Z&X-Amz-Expires=86400&X-Amz-Signature=6100dc5932c52c53560af3307df596d6aa3ff2edb2b485ee3aa05f6cbf663ea0&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+  ![](https://lh6.googleusercontent.com/-01OiTSnh2zXq9Vt97BOyFQL5rTWfgrDF4MnyfFcWMU0du5X6l9BC_TfahN30SFVMfP6V_LZvBBqIsCJg0pKG2jkCHRusKXUqmt7QtUdNoAHEoUGvAtWrHnNDRc7NMQSqRVAvlnj)
 
   3.2 influxdb UI 접속
 
   `http://localhost:8086`
 
-  ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/46914bf0-8dd1-4ba2-9755-45970a5e3b14/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211228T061311Z&X-Amz-Expires=86400&X-Amz-Signature=541e1da450deccf1ce38bb721d88c35017085aae0853057c7319aba7ffb26fe7&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+  ![](https://lh4.googleusercontent.com/q9YmR1GjqUnJhkv1LY3_HsPcwzPlaYCmlGlzm6fGoWpcJt5vrZMI70hZ-rzXLaSoEidOj0k-uPI2BeFMKb76FNtF9LY8N_8kojJCZ-elP14RWlc5Rf8bR7RB7fdopbEYOuhBQJmu)
 
   
   3.3 초기 설정 (user, password, organization, bucket)
 
-  ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ec8bae6c-16d4-49f9-9e33-469ea92bc7bf/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211228T061321Z&X-Amz-Expires=86400&X-Amz-Signature=04391515f99a10bf142c29fabd0a4b05647c78b8f6a59fd7ed94a97541b76196&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+  ![](https://lh6.googleusercontent.com/HiCOgJY71tg7B2Xgvzufl8sCg978zcYfZiXviVeyTl7FV4thZpA9Ks5_WPFLmTxC60owqVgL6hdyJ90bZ8EwR5DL4Qge5eBAOsTWG4-uDSTQYGFPOj75jESPg7lO_8IWcAD6Xxx7)
+
 
   
   3.4 Telegraf Configuration 생성
 
   Data > Telegraf > Create Configuration
 
-  ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/69025e9c-d1bb-4ab7-9c54-81a901c2120d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211228T061334Z&X-Amz-Expires=86400&X-Amz-Signature=a19d8c25efef0f8cf3e8e5ea22682d9cf84d15f2a986a7ca737daa9c0d6e609c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
-  
-  ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2339b627-568f-4811-8332-fe22d1c0371d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211228T061342Z&X-Amz-Expires=86400&X-Amz-Signature=a132669d4c7a11a8e4a0ed2029e0f5ac8d77ffe85b4ed58a7b9c457cce899741&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+  ![](https://lh4.googleusercontent.com/rFNaXCPnEk2MaEjaQyiQdHniZ7RHxo0ZbrAA2ZSWeIqSTOO0Tpb1ofYttrV3JvVrWBJhe0fWUoQgjhXxefha9GunmNX9zNU_t8mF26h7Gpn0-eEzTG6rrHjyvDFGWLWu5p06dVch)
 
-  ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/83b8d907-e08d-4c07-bacb-b987c0d4f45a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211228T061353Z&X-Amz-Expires=86400&X-Amz-Signature=a8139ed8e5d6c800664633c2d75a70e305c25bcf94967d26011fec9412038e40&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+  ![](https://lh3.googleusercontent.com/5W2GUeJu1a9D-bIGBJyMcH30FMW_vUE317za7DincWoDUnCrwreuiXeg6EUHnZOFntdUSeNkk_UgBlQwsMqpDqPDS9xHYQC9gl9TdrSjOPNnReKjF9JpcNDnCKwsa62Wdh1lgKuc)
+
+  ![](https://lh4.googleusercontent.com/_z9RR5tcwO66VfejGaotbwCjW5eDNogGkLoEnOEbdoUNkLCRnqUbHTpymY7I2FU_SZM4KisMDUoc6nAo53xmglbXD97AEfjU30ur7nPGZ3GYcxBCQsdq8gB1kyPL_V3-unbE0H1d)
 
   
   3.5 API Token 받기
 
-  ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2df6efb0-e293-4a0e-b501-74c569dc1622/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211228T061402Z&X-Amz-Expires=86400&X-Amz-Signature=0376daa21a999e80068af010f7c4ef6b40ee36bdfe21d2d6ac2a5e1415345d67&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+  ![](https://lh6.googleusercontent.com/8gXALBS81uUEDUHIuADeBHCFWyZuro3GEK1X-HuSBUCpPI3CVWGmoCZsp3MSBFDUULG261DxqMtTEKWQGnY2VE1Dg-QkX_vkwHo15CdjfxHaRPbYzN0Akh5e0LJZKNhUGcS-EOsj)
 
 
 4. host에 telegraf.conf 작성
     
     Data > Telegraf > 생성한 config 선택
     
-    ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4957edfd-0456-41cc-911e-178b2ad181a5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211228T061412Z&X-Amz-Expires=86400&X-Amz-Signature=9bb25e5e4b04799f7b401a31a3d750f8cef10414d25fa00f24a68f9470449721&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+    ![](https://lh4.googleusercontent.com/qRw68YbEQ_SsHsZvZ1L0ubaa3ks5pob6ZBXzrBNrNCQrSMBTFEJTXYsaP-aop-1eGAq30pLGpzumGdVk335bHSP4FnQDsG-Gi0CSu58HrP0AXcbQMUCXPczltCA2BA6FbkA_pMsU)
     
-    ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a756b00f-780f-45ba-9355-3b1e2604e6bc/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211228T061424Z&X-Amz-Expires=86400&X-Amz-Signature=a3228b64418b0e2a8720d405cb69505a8dd80182ac523b65a48c99faab74f866&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+    ![](https://lh6.googleusercontent.com/kREXgrFqP9i-UOLE8YINDSaeMJMjIrKgLyZLuVfUIrFv70pBRKWvxhU2c5GOdIku7AJKyD7fHJU1EnAs6rc1fbXe8ZEVzX_TWi6OwDEnLoWSwRdHVObvygkCcc8fqzQO4HXzZvcl)
     
-    ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c1c05d3c-0ba0-4322-b026-6d87f9651316/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211228T061433Z&X-Amz-Expires=86400&X-Amz-Signature=8104f0ee3c2ecfedc69bc2576eb809c97bd1ec5d560ca7760736145dd4bad27e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+    ![](https://lh5.googleusercontent.com/dxFoR6VH6EfP12T7ngL26UFHv_TuT6b51PMedJMQ8NSsYSf9Ok3iiMC7JX8xUz14j1jR1Az4vza8D7s_9J_qCp1lFWAJYhHE1qQIwzLAavA_uQCSP_kVwatzFTvNLdR8zrYda-1V)
     
     /docker/telegraf/telegraf.conf 파일에 해당 내용 동일하게 기재
     
 
 5. telegraf 컨테이너 실행
 
-![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/20741fb0-8c26-4e9f-9ccd-2cb7b98f59e2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211228T061510Z&X-Amz-Expires=86400&X-Amz-Signature=948cb8e8222afc190e3859f1997ef16041d1dc828fa5d07a94bbf5f8a5b43394&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+![](https://lh4.googleusercontent.com/GaPYIm-693QVcZeJXobmnwpdrjUTyUMt5Dnt17dWdoDnAKJmk9-ti-OvwGwaGFiy189CsAy4dpBdE9yvp1ntqMhIHxNYHSryiPbaw8hRNQ2Vx3TfJUgJNsjq-1bCYV-TIdd5rWzy)
 
 
 6. log로 telegraf 정상 동작 여부 확인
     
-    ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c89ca1c3-35c9-487c-9468-a3557bd9086f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211228T061518Z&X-Amz-Expires=86400&X-Amz-Signature=7be592565befcc0174b48a055e368d3b96709eaacb7ad1658061ec78a9f104f0&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+    ![](https://lh5.googleusercontent.com/WZnJ0nREn2hRLLrQGnyxB1uhc94mosS0tnHMjooffkEyxFlbAmKxc2P2MnPiJorZXv1nM0IL_Zb1l80sxPD4bMHdGb5qg-nWJ4Av_4alx2ZKgtYIT2GpnATIuzgc0dAqXD6cVaqX)
     
 
 7. Influxdb 그래프 확인 (Boards > 생성한 bucket)
     
-    ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e288808a-2b38-4e4d-b49f-27ab0630e975/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211228T061527Z&X-Amz-Expires=86400&X-Amz-Signature=057aa51fecc9040861937805e6f4c3ed9cf83427ffa4389a117c75a51c64d871&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+   ![](https://lh5.googleusercontent.com/550NrnpItcLGr4vWJIkqc2nBVoCgjiFnM0tgBDBP6r2xJyALJgh1j-8NnniFr2naUtUikOgr4sM3cj9v0pownb2_5bOFTWcNy83lUNa-saRYWLOIYfG1U9hqT0I9x-XFt9mceB_U)
     
 
 ## References
