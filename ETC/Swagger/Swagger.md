@@ -11,6 +11,8 @@ Swagger(스웨거)는 개발자가 REST API 서비스를 설계, 빌드, 문서�
 
 ## Swagger 기능
 
+![](https://lh5.googleusercontent.com/eBJhWVNEVM99CErL0bNGx1xl-bYhdd2nmDxhCTJIaMhExke9ci4KUVeGjNm76xZYDfWuMU_2p7GC-omnV5kfKf1Ajq6UuHKkLsozqOJbMjQMjxZMRNEGU0xUJLhHa0eiKCZUpbM2)
+
 **API Design (API 설계)**
 
 Swagger-editor를 통해 API를 문서화하고 빠르게 명세할 수 있습니다.
@@ -60,7 +62,9 @@ API 개발 및 유지보수를 하는 과정에서 Postman을 가장 많이 사�
 
 또한 Swagger를 사용하면 문서 화면에서 API를 바로 테스트 할 수 있는 Test-bed를 제공할 수 있습니다.
 
+![](https://lh3.googleusercontent.com/-yHuLEizJhZrOkE37r9yk0JfplvaiADZx3alS0xmbVZ1jhEgV8_NTAONqX3wmlES5gnRxvnC97FM8ihLlYjS8TJ4_1KxMYmbBnEStPP2bTOGn22-zFKfWmXvSrGUa4N-a7zVhtny)
 
+![](https://lh5.googleusercontent.com/UAo1BQ1Jezx8ZRjBKNi1KaZ03ASg1uCVEzHp59FuFm4-1V1bCz2z8rb55QxjS67p3XKe2QgFToEG-gYURyH87tnOT7tZcPNgDMi16DJXeTtV085lEf71FqVvHoe6BHjmCzPmknUw)
 
 Spring Boot에 Swagger를 적용하여 위와 같이 API 문서에 대한 설명 뿐만 아니라 각 파라미터 항목에 대한 설명도  추가할 수 있습니다.
 
