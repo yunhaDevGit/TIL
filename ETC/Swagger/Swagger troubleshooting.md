@@ -47,7 +47,7 @@ public class SwaggerConfig {
 springfox-boot-starter는 필요한 모든 의존성을 다 들고 있어 혹시 의존성 문젠가 싶어 추가해주었더니 swagger-ui가 정상적으로 보였다^^
 
 
-###build.gradle
+### build.gradle
 ```
 implementation “io.springfox:springfox-boot-starter:3.0.0”
 ```
