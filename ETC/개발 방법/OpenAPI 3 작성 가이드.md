@@ -4,14 +4,15 @@
 - Swagger 2.x 의 경우 기업 별로 OpenAPI를 제공하는 명세를 사용하였지만 OpenAPI initiative 라는 그룹으로 통합하여 공통된 Spec인 Open API specification을 제공하기로 하였는데 이때부터 OpenAPI 3.x 로 명명되었습니다.
 - 저희는 통합 규약을 따르기 위해 OpenAPI 3.x 를 사용하기로 하였습니다.
 - Swagger 2.x에서 OpenAPI 3.x로 변경됨에 따라 Annotation도 변경되었습니다. 변경 Annotation은 아래와 같습니다.
+![image](https://user-images.githubusercontent.com/74949294/151315075-966f95cf-49f2-4697-a104-393662e44e7e.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c75d815e-fcd7-4f61-bb51-e7f03f5951ab/Untitled.png)
+
 
 ## gradle dependencies
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2c425110-cb6c-4480-a3f8-1645c65ac20e/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/151315029-a251b464-8741-4b94-aa3d-b51ac7306ff3.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ab6b82d4-9c93-4f24-8974-7f3b4d33e323/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/151315103-be6e029c-9080-4b3e-88fb-3fec96b247dd.png)
 
 현재 Maven Repository를 확인해보면 SpringFox에서도 2020년 7월 업데이트 되어 OpenAPI 3.x 의존성을 제공하지만 SpringFox와 달리 Springdoc에서 `OpenAPI UI`라는 이름으로 꾸준히 업데이트 되는 것을 확인 할 수 있습니다.
 
