@@ -22,7 +22,7 @@ Handshake가 완료되면 Connection이 유지하기 때문에 가용 port 수 �
 
 그러므로 `자주 + 많은 양의 + 지연이 짧아야 하는 통신` 을 할 수록 적합합니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/55a87c72-ee5f-4869-bacb-0faa61f457d5/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/151501280-2466058e-b71c-4d34-8cd5-43c1295c2c8d.png)
 
 붉은 박스 : Opening Handshake
 
