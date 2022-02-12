@@ -24,6 +24,8 @@
 
 :file_folder: Algorithm
 
+:file_folder: DB
+
 :file_folder: Docker
 
 :file_folder: Git
