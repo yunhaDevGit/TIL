@@ -1,14 +1,14 @@
 ## 문제
 
 단일 모듈 환경에서의 Swagger UI 정상 동작 여부를 확인 후, 멀티 모듈로 변환 후 Swagger UI를 실행 했을 경우 아래와 같은 에러가 발생했습니다.
-
-[##_Image|kage@IMvIW/btru5rtu6Zo/F2wKFCFi9A0uGh2lKKeRb1/img.png|CDM|1.3|{"originWidth":936,"originHeight":470,"style":"alignCenter","width":637,"height":320}_##]
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FIMvIW%2Fbtru5rtu6Zo%2FF2wKFCFi9A0uGh2lKKeRb1%2Fimg.png)
 
 ```
 Ambiguous handler methods mapped for '/v3/api-docs'
 ```
 
-[##_Image|kage@4KWsJ/btru5bjB9I9/ziIak9GVWdNjfo62d5iKBK/img.png|CDM|1.3|{"originWidth":1280,"originHeight":257,"style":"alignCenter","width":790,"height":159}_##]
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F4KWsJ%2Fbtru5bjB9I9%2FziIak9GVWdNjfo62d5iKBK%2Fimg.png)
+
 
 ## 해결
 
@@ -23,5 +23,4 @@ springdoc:
 해당 설정 추가 후 아래와 같이 Swagger UI가 정상적으로 보입니다.
 
 OpenAPI의 api-docs의 기본 URL이 /v3/api-docs 여서 발생한 에러였습니다.
-
-[##_Image|kage@rDApd/btru2wV7bAL/oPSuKVIB962XTEzb0Pul70/img.png|CDM|1.3|{"originWidth":917,"originHeight":536,"style":"alignCenter","width":759,"height":444}_##]
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FrDApd%2Fbtru2wV7bAL%2FoPSuKVIB962XTEzb0Pul70%2Fimg.png)
