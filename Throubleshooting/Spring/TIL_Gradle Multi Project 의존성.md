@@ -2,4 +2,4 @@
 
 multi-project에서 다중으로 dependency 추가했을 경우 발생하는 error
 
-부모 프로젝트에서 dependency 추가 했을 경우, 자식 
+부모 프로젝트에서 dependency 추가 했을 경우, 자식 프로젝트에는 dependency 추가하지 말 것
