@@ -31,9 +31,8 @@ public class HealthCheckResponseDto {
 빌더 패턴의 기본은 필드의 초기화 작업을 좀 더 유연하게 도와주는 역할을 하기 때문이다. 
 
 > ***Lombok 공식사이트 @Builder 설명 中***
-
-Finally, applying @Builder to a class is as if you added @AllArgsConstructor(access = AccessLevel.PACKAGE) to the class and applied the @Builder annotation to this all-args-constructor. This only works if you haven't written any explicit constructors yourself.
-> 
+> Finally, applying @Builder to a class is as if you added @AllArgsConstructor(access = AccessLevel.PACKAGE) to the class and applied the @Builder annotation to this all-args-constructor. This only works if you haven't written any explicit constructors yourself.
+ 
 
 또한 @Builder를 사용할 경우, 생성한 생성자가 없다면 @AllArgsConsturctor(access=AcessLevel.PACAKAGE)가 암묵적으로 적용 된다.
 
