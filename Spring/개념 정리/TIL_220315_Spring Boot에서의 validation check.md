@@ -9,14 +9,18 @@ Client의 데이터는 조작이 쉬울 뿐더러 모든 데이터가 정상적�
 스프링 부트 프로젝트에서는 `@Validated`를 이용해 유효성을 검증할 수 있습니다. 
 
 > **@Valid, @Validated 차이**
-`@Valid`는 Java에서 지원해주는 어노테이션이고, `@Validated`는 Spring에서 지원해주는 어노테이션입니다. `@Validated`는 `@Valid`의 기능을 포함하고, 유효성 검사할 그룹을 지정할 수 있는 기능을 추가로 제공합니다.
 > 
+> `@Valid`는 Java에서 지원해주는 어노테이션이고, `@Validated`는 Spring에서 지원해주는 어노테이션입니다. 
+> 
+> `@Validated`는 `@Valid`의 기능을 포함하고, 유효성 검사할 그룹을 지정할 수 있는 기능을 추가로 제공합니다.
+
 
 스프링에서는 애노테이션 하나로 검증 로직을 편리하게 적용할 수 있는 Bean Validation을 제공합니다. Bean Validation은 bean 유효성 검사를 위한 명세일 뿐 동작하는 코드가 아닙니다. 그렇기 때문에 이를 구현한 코드가 필요한데 Bean Validation을 실제로 동작하도록 구현한 것이 **`Hibernate Validator`** 입니다.
 
 > **Bean-validation** : JSR-380, 애노테이션을 이용하여  bean 유효성 검사를 위한 Java API 스펙
-**Hibernate-validator** : Bean Validation을 구현한 Java API
 > 
+> **Hibernate-validator** : Bean Validation을 구현한 Java API
+
 
 ### Spring Boot Validation 적용하는 방법
 
@@ -26,7 +30,7 @@ spring boot는 Bean Validation을 Validation 모듈로 사용하고 있습니다
 
 때문에 spring boot version이 2.3 이상일 경우 validation 의존성을 따로 추가해줘야 합니다. 
 
-G*radle 의존성*
+*Gradle 의존성*
 
 ```java
 // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation
@@ -96,9 +100,11 @@ public class UserService {
 ```
 
 > @Valid와 @Validated에 의한 예외 클래스도 각각 다릅니다. 
-**@Valid -** MethodArgumentNotValidException
-**@Validated** - ConstraintViolationException
 > 
+> **@Valid -** MethodArgumentNotValidException
+> 
+> **@Validated** - ConstraintViolationException
+
 
 [https://velog.io/@_koiil/SpringBoot-Spring-Validation을-이용한-유효성-검증](https://velog.io/@_koiil/SpringBoot-Spring-Validation%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%9C%A0%ED%9A%A8%EC%84%B1-%EA%B2%80%EC%A6%9D)
 
