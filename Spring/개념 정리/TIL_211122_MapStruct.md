@@ -85,3 +85,54 @@ public class VmService {
 	}
 }
 ```
+-----
+
+## 다른 사용법
+
+[https://mapstruct.org/](https://mapstruct.org/)
+
+**Car.java**
+
+```java
+public class Car {
+ 
+    private String make;
+    private int numberOfSeats;
+    private CarType type;
+ 
+    //constructor, getters, setters etc.
+}
+```
+
+**CarDto.java**
+
+```java
+public class CarDto {
+ 
+    private String make;
+    private int seatCount;
+    private String type;
+ 
+    //constructor, getters, setters etc.
+}
+```
+
+**CarMapper.java**
+
+```java
+@Mapper 1
+public interface CarMapper {
+ 
+    CarMapper INSTANCE = Mappers.getMapper( CarMapper.class ); 3
+ 
+    @Mapping(source = "numberOfSeats", target = "seatCount")
+    CarDto carToCarDto(Car car); 2
+}
+```
+
+1. `@Mapper` annotation은 인터페이스를 매핑 인터페이스로 표시하고 컴파일하는 동안 MapStruct 프로세서가 동작하도록 합니다. 
+2. 실제 매핑 메서드는 source 객체를 매개 변수로 받고 target 객체를 반환합니다. 이름은 자유롭게 설정할 수 있습니다. 
+source와 target 객체 간에 이름이 다를 경우`@Mapping` 어노테이션을 통해 설정할 수 있습니다.
+필요에 따라 가능한 경우 source와 target의 유형이 다를 때 서로 다른 속성에 대해 유형 변환을 해줍니다. 
+예를 들면, enum 타입을 string으로 변환해줍니다.
+3. 인터페이스 구현 인스턴스는 `Mappers` 클래스에서 가져올 수 있습니다. 일반적으로 인터페이스는 멤버를 `INSTANCE`로 선언하고 클라이언트에게 mapper 구현체에 대한 접근을 제공합니다.
