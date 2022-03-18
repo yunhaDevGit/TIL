@@ -6,13 +6,15 @@
 
 maven build tool의 경우 아래에서 하늘색 원의 번개 모양 버튼 `Toogle 'Skip Tests' mode`을 누르면 자동으로 test를 제외하고 build를 하는데 gradle은 그런 버튼이 따로 없었다. 
 
+maven toolbar
+
 ![image](https://user-images.githubusercontent.com/74949294/158960575-eda1ef2f-9896-49a9-a1f9-5ccab7531e73.png)
 
-maven toolbar
+
+gradle toolbar
 
 ![image](https://user-images.githubusercontent.com/74949294/158960595-8f02e13e-5034-4984-927d-225f617899aa.png)
 
-gradle toolbar
 
 IntellJ에서 Gradle Build Tool을 사용할 경우 Test 제외하는 방법은 다음과 같다.
 
