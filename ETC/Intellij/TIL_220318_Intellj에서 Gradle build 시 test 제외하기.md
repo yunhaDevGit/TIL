@@ -8,7 +8,11 @@ maven build tool의 경우 아래에서 하늘색 원의 번개 모양 버튼 `T
 
 ![image](https://user-images.githubusercontent.com/74949294/158960575-eda1ef2f-9896-49a9-a1f9-5ccab7531e73.png)
 
+maven toolbar
+
 ![image](https://user-images.githubusercontent.com/74949294/158960595-8f02e13e-5034-4984-927d-225f617899aa.png)
+
+gradle toolbar
 
 IntellJ에서 Gradle Build Tool을 사용할 경우 Test 제외하는 방법은 다음과 같다.
 
@@ -29,4 +33,4 @@ IntellJ에서 Gradle Build Tool을 사용할 경우 Test 제외하는 방법은 
 
 4. 위와 같이 설정을 해주었더니 정상적으로 build 되는 것을 확인 할 수 있었다.
 
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/74949294/158960844-d4ee068a-7bf1-4539-ba7a-b97bef314a61.png)
