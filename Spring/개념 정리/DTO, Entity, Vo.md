@@ -26,7 +26,12 @@ public class UserDto {
 }
 ```
 
-
+> **DTO와 VO와의 차이**
+> 
+> VO(Value Object)도 DTO와 동일한 개념이다. 
+> 
+> 다만 DTO와의 차이는, DTO는 데이터를 계층간 교환(Transfer)하는데 의미가 있고, VO는 읽기만 가능한 read-only 속성을 가진 객체로서 데이터 그 자체에 의미를 두고 있다는 점이다.
+>
 
 ### Entity =  Domain
 - DB 테이블의 칼럼 만을 필드로 가지는 클래스
