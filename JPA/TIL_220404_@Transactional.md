@@ -39,7 +39,8 @@
 
 또한, 스프링 컨테이너는 **트랜잭션 범위의 영속성 컨텍스트 전략**을 기본으로 사용한다. 서비스 클래스에서 @Transactional을 사용할 경우, 해당 코드 내의 메서드를 호출할 때 영속성 컨텍스트가 생긴다. 영속성 컨텍스트는 `트랜잭션 AOP`가 트랜잭션을 시작할 때 생기고, 메서드가 종료되어 트랜잭션 AOP가 트랜잭션을 커밋할 경우 영속성 컨텍스트가 flush 되면서 해당 내용이 반영된다. 이후 영속성 컨텍스트 역시 종료된다. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7dfb6d5c-1e6d-4d2a-9b00-df40c5431a31/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/161525765-25975963-3381-47d2-91be-ab27a70b90df.png)
+
 
 [https://velog.io/@kdhyo/JavaTransactional-Annotation-알고-쓰자-26her30h](https://velog.io/@kdhyo/JavaTransactional-Annotation-%EC%95%8C%EA%B3%A0-%EC%93%B0%EC%9E%90-26her30h)
 
