@@ -16,13 +16,13 @@
 
 파일을 열고 `maven-default-http-blocker` 설정을 주석 또는 삭제한다. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ef101227-5d6f-4547-b52b-ea8ef6038074/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/164188876-4e054803-05fe-4e82-bc89-5747d0be11e4.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0a77f60b-a240-4f69-ba7d-525200439c88/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/164188914-7556f74f-0d24-4b7c-bd37-7a158493f9cd.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4b997e00-a33c-4127-ba27-9086c4d76237/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/164188956-a8110e11-e25e-4038-b71e-b797c95fd0f4.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/615c79a4-7880-4133-a160-087878846c8d/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/164188983-11f3bab2-4368-4f80-9f52-dd7157664bf2.png)
 
 ```xml
 <!-- <mirror>
@@ -35,7 +35,7 @@
 
 1. IntelliJ에서 clean > install 수행
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/20def017-aded-4322-aea9-73d237263b12/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/164189016-f2b3ebc0-3ddf-4b7c-8196-04773116ad29.png)
 
 [https://jjam89.tistory.com/201?category=903879](https://jjam89.tistory.com/201?category=903879)
 
