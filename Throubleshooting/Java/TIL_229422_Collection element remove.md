@@ -59,7 +59,7 @@ import java.util.Arrays; // Arrays.asList(); -> Arrays의 정적 클래스인 Ar
 Arrays.asList()는 [javadoc](https://docs.oracle.com/javase/7/docs/api/java/util/Arrays.html#asList(T...))에 아래와 같이 설명되어 있다.
 
 > *Returns a fixed-size list backed by the specified array.
-특정한 배열에 의해 백업된 고정 크기 List로 반환.*
+> 특정한 배열에 의해 백업된 고정 크기 List로 반환.*
 > 
 
 즉. `Arrays.asList()`는 고정된 List이기 때문에 List에 원소를 **추가, 삭제**를 할 수 없다
