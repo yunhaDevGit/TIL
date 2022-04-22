@@ -67,3 +67,6 @@ Arrays.asList()는 [javadoc](https://docs.oracle.com/javase/7/docs/api/java/util
 때문에 원소 추가 및 삭제 하려고 할 경우 위와 같은 Exception이 발생하는 것이다. 
 
 `Arrays.asList()`를 사용하여 생성한 리스트에 원소를 추가 및 삭제하고 싶은 경우 아래와 같이 `new ArrayList<>`로 묶어주면 된다.
+```java
+new ArrayList<>(Arrays.asList(list));
+```
