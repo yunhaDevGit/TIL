@@ -2,7 +2,15 @@
 
 ## Core Concept
 
-RabbitMQ에서 중요한 개념은 Producer, Consumer, Queue, Exchange, Binding이 있습니다. 
+RabbitMQ란 Java로 만든 표준 AMQP를 구현한 오픈 소스 `메세지 브로커 시스템`입니다.
+
+AMQP를 지원하는 메세지 큐 브로커로 플러그인 방식으로 MQTT를 지원합니다.
+
+AMQP를 이용한 범용 메세징 서버라 좀 무겁지만 클러스터링을 지원하며 다양한 플러그인을 이용하여 기능을 확장할 수 있습니다.
+
+STOMP, 웹 소켓, HTTP(S)  등 다양한 통신 프로토콜을 지원하기 때문에, 메세징 서버 인프라 개발에 적절합니다.
+
+RabbitMQ에서 중요한 개념은 Producer, Consumer, Queue, Exchange, Binding이 있습니다.
 
 ![image](https://user-images.githubusercontent.com/74949294/166873464-ddabda81-2a92-4f35-b889-d542b73353c4.png)
 
