@@ -77,5 +77,5 @@ Car(String color, String gearType, int door) {
 ```
 
 > this와 this()는 비슷하게 생겼을 뿐 완전히 다르다.
-this는 `참조 변수`이고, this()는 `생성자`이다
->
+> this는 `참조 변수`이고, this()는 `생성자`이다
+
