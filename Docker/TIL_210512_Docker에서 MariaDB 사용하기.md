@@ -96,7 +96,7 @@ user 생성 및 권한 부여
 
 ```sql
 create user 'yunha'@'%' identified by 'yunha98';
-grant all privileges on .*. to 'yunha'@'%';
+grant all privileges on *.* to 'yunha'@'%';
 flush privileges;
 ```
 
