@@ -489,3 +489,18 @@ RAM 노드만 포함하는 클러스터는 매우 휘발성이 강하기 때문�
 
 node 유형을 ram↔ disc로 변경할 수 있습니다.
 
+```shell
+# RAM -> disc
+$ rabbitmqctl stop_app
+
+$ rabbitmqctl change_cluster_node_type disc
+
+$ rabbitmqctl start_app
+
+# disc -> RAM
+$ rabbitmqctl stop_app
+
+$ rabbitmqctl change_cluster_node_type ram
+
+$ rabbitmqctl start_app
+```
