@@ -48,7 +48,7 @@ Mybatis는 Sql Mapper 중 하나로 jdbc로 처리하는 코드의 설정(connec
 
 ### MyBatis3 구성 요소가 Database Access 하는 순서
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/617a6778-a444-4935-9322-3634fbb6fca8/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/173783243-691bd449-4006-4378-ba65-a1be3dce7af7.png)
 
 **(1) ~ (3)은 응용 프로그램 시작 시 수행되는 프로세스입니다**
 
@@ -92,8 +92,7 @@ Mybatis는 Sql Mapper 중 하나로 jdbc로 처리하는 코드의 설정(connec
 - MyBatis3 표준 메커니즘에 의해 생성된 매퍼 객체는 Thread-safe 하지 않습니다. 따라서 각 스레드에 대한 인스턴스를 할당해야 했습니다. Mybatis-spring 구성 요소에 의해 생성된 SqlSession 개체는 안전한 SqlSession 개체를 생성할 수 있습니다. 따라서 서비스 등 싱글톤 구성 요소에 DI를 적용할 수 있습니다.
 
  
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/24529cb1-1a47-4cc0-a360-be6742afad9f/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/173783271-f45c5a6b-8be5-4873-87c5-09fc6da9a780.png)
 
 **(1) ~ (4)은 응용 프로그램 시작 시 수행되는 프로세스입니다**
 
