@@ -12,7 +12,7 @@ Refresh Token은 Access Token과 똑같은 형태의 JWT입니다. 처음 로그
 
 ## Access Token + Refresh Token 인증 과정
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/236050db-48f7-4c1e-98fb-60de2f4bf804/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/174010842-7bb74100-0efa-4287-afdc-6458971c17bb.png)
 
 1. 사용자가 ID, PW를 통해 로그인
 2. 서버에서는 회원 DB에서 값을 비교
