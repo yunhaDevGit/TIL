@@ -19,7 +19,7 @@ Authentication은 SecurityContextHolder 내부에 보관되는 SecurityContext�
 
 ## SecurityContextHolder
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c227ac66-9612-4ffe-b1c6-e5e16f09f81c/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/174008733-9367d324-9a6d-4fee-b4a6-4a479d914ef5.png)
 
 - 인증된 사용자의 구체적인 정보를 보관한다
 - Spring Security는 SecurityContextHolder가 어떻게 만들어지는지에 대해 신경 쓰지 않는다
