@@ -36,7 +36,7 @@ J3SE 5.0부터 어노테이션을 작성할 때 주로 java.lang.annotation 패�
     - ElementType.PACKAGE (remember package-info.java)
 - `@Inherited` : 자식 클래스에 상속할 지 결정
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5ccbf2b0-bef1-4508-9ef3-cf1c46a963ed/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/174241617-4c099f7d-a0eb-4172-af0e-2970cd129772.png)
 
 ## Custom 어노테이션 만들기
 
