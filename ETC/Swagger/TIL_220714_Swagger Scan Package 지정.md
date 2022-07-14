@@ -2,11 +2,11 @@
 
 **pom.xml**
 ```xml
-        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-ui</artifactId>
-            <version>1.6.8</version>
-        </dependency>
+<dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-ui</artifactId>
+        <version>1.6.8</version>
+</dependency>
 ```
 
 **application.yml**
