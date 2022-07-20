@@ -14,19 +14,19 @@
 
 ```
 com
-	ㄴ openapi
-				ㄴ openapi3test
-						 ㄴ config
-									ㄴ SwaggerConfig.java
-									ㄴ WebSecurityConfig.java
-									ㄴ WebMvcConfig.java
-						 ㄴ controller
-									ㄴ test1
-											 ㄴ TestController1.java
-									ㄴ test2
-											 ㄴ TestController2.java
-									ㄴ test3
-											 ㄴ TestController3.java
+  ㄴ openapi
+        ㄴ openapi3test
+                ㄴ config
+                      ㄴ SwaggerConfig.java
+                      ㄴ WebSecurityConfig.java
+                      ㄴ WebMvcConfig.java
+                ㄴ controller
+                      ㄴ test1
+                           ㄴ TestController1.java
+                      ㄴ test2
+                           ㄴ TestController2.java
+                      ㄴ test3
+                           ㄴ TestController3.java
 ```
 
 - **pom.xml**
@@ -35,9 +35,9 @@ com
     
     ```xml
     <dependency>
-    	<groupId>org.springdoc</groupId>
-    	<artifactId>springdoc-openapi-ui</artifactId>
-    	<version>1.6.8</version>
+       <groupId>org.springdoc</groupId>
+       <artifactId>springdoc-openapi-ui</artifactId>
+       <version>1.6.8</version>
     </dependency>
     ```
     
@@ -45,7 +45,7 @@ com
     
     ```yaml
     server:
-    	port: 8090
+       port: 8090
     ```
     
 - **SwaggerConfig.java**
@@ -124,9 +124,9 @@ com
     
     위와 같이 설정을 하고 실행해보니 `Failed to load remote configuration`에러가 나왔습니다. 
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c4371dba-eeed-4ca2-a1df-e5dc897b2a7c/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/74949294/179909073-9d75b384-6252-4cd8-b7a7-d46defd4595c.png)
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac2f26e9-1d21-456f-8e5e-3e390ab7a06e/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/74949294/179909086-074cb5ae-f3e3-40c6-9563-0eba895b3341.png)
     
     403 권한 에러가 났습니다.
     
@@ -154,7 +154,7 @@ com
     
 2. **Swagger Petstore**
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a3d05134-3dc7-450f-b1d0-5c4659ec2215/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/74949294/179909108-3f6b09d7-cac3-43bc-b54d-b9bb77145e3e.png)
     
     `WebSecurityConfig.java`에 올바른 경로를 입력해준 결과 swagger-config는 정상적으로 잘 불러왔습니다.
     
@@ -164,30 +164,30 @@ com
     
     ```yaml
     springdoc:
-      swagger-ui:
-        disable-swagger-default-url: true
+       swagger-ui:
+           disable-swagger-default-url: true
     ```
     
 3. **Failed to load API definition**
     
     위의 설정을 통해 샘플 페이지가 나오진 않았지만 /api-docs를 호출하는 과정에서 계속해서 API를 로드 하지 못하는 이슈가 발생했습니다.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a97ce721-76d6-49a5-91c2-782f2fef0bbb/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/74949294/179909123-410d3db2-6a04-4b70-bb34-75c76c79b0ba.png)
     
     ⬆️ 해당 이슈 재연이 불가하여 비슷한 에러 화면으로 대체하였습니다. 
     
     ```json
     {
-    	error: "INTERNAL_SERVER_ERROR"
-    	message: "요청을 수행하는 도중 오류가 발생하였습니다"
-    	status: 500
-    	timestamp: "2022-07-13 20:27:34.491"
+       error: "INTERNAL_SERVER_ERROR"
+       message: "요청을 수행하는 도중 오류가 발생하였습니다"
+       status: 500
+       timestamp: "2022-07-13 20:27:34.491"
     }
     ```
     
     계속해서 Fetch error, 500 error가 발생했습니다.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8ae47e95-43cb-4029-a0e3-59705f746966/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/74949294/179909146-7f4ab607-e453-44e5-adae-b44ce1389cff.png)
     
     위와 같은 로그와 `org.apache.logging.log4j`를 찾지 못한다는 메세지가 나왔습니다. 
     
@@ -199,18 +199,18 @@ com
     
     ```yaml
     springdoc:
-      version: '@project.version@'
-      api-docs:
-        path: /api-docs
-      default-consumes-media-type: application/json
-      default-produces-media-type: application/json
-      swagger-ui:
-        path: /swagger-ui.html
-        disable-swagger-default-url: true
-        display-query-params-without-oauth2: true
-        doc-expansion: none
-      paths-to-match:
-        - /api/**
+       version: '@project.version@'
+       api-docs:
+          path: /api-docs
+       default-consumes-media-type: application/json
+       default-produces-media-type: application/json
+       swagger-ui:
+          path: /swagger-ui.html
+          disable-swagger-default-url: true
+          display-query-params-without-oauth2: true
+          doc-expansion: none
+       paths-to-match:
+          - /api/**
     ```
     
     위의 설정들을 해주었지만 여전히 API를 찾지 못했습니다. 
@@ -219,27 +219,27 @@ com
     
     ```
     // 패키지 구조
-    com
-    	ㄴ openapi
-    				ㄴ openapi3test
-    						 ㄴ config
-    									ㄴ SwaggerConfig.java
-    									ㄴ WebSecurityConfig.java
-    									ㄴ WebMvcConfig.java
-    						 ㄴ controller
-    									ㄴ test1
-    											 ㄴ TestController1.java
-    									ㄴ test2
-    											 ㄴ TestController2.java
-    									ㄴ test3
-    											 ㄴ TestController3.java
+	 com
+	  ㄴ openapi
+		ㄴ openapi3test
+			ㄴ config
+			      ㄴ SwaggerConfig.java
+			      ㄴ WebSecurityConfig.java
+			      ㄴ WebMvcConfig.java
+			ㄴ controller
+			      ㄴ test1
+				   ㄴ TestController1.java
+			      ㄴ test2
+				   ㄴ TestController2.java
+			      ㄴ test3
+				   ㄴ TestController3.java
     ```
     
     아래와 같이 controller가 담긴 패키지들의 부모 패키지를 지정해주었습니다.
     
     ```yaml
     springdoc:
-    	packagesToScan: com.openapi.openapi3test.controller
+       packagesToScan: com.openapi.openapi3test.controller
     ```
     
     그러나 여전히 동일한 에러가 발생했습니다. 
@@ -248,13 +248,13 @@ com
     
     ```yaml
     springdoc:
-    	packagesToScan: com.openapi.openapi3test.controller.test1, com.openapi.openapi3test.controller.test2, com.openapi.openapi3test.controller.test3
+       packagesToScan: com.openapi.openapi3test.controller.test1, com.openapi.openapi3test.controller.test2, com.openapi.openapi3test.controller.test3
     ```
     
 
 🎉🎉🎉🎉🎉
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/97534d9d-b28b-4d62-8d52-e503b163b486/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/179909591-9bc71849-9b30-49f7-a1f8-0c1d7bd474f1.png)
 
 ‼️결론‼️
 
