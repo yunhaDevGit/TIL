@@ -17,7 +17,7 @@ Openstack API 요청 시 **`X-OpenStack-Nova-API-Version`** Header를 추가하�
 
 Openstack4j 라이브러리의 API가 아닌 Feign Client로 특정 버전을 지정하여 요청.
 
-![image](https://user-images.githubusercontent.com/74949294/185025904-2291412d-f4ee-45c8-a189-873101e0812d.png)
+![image](https://user-images.githubusercontent.com/74949294/185025934-ff959b74-a43a-461a-a2c9-e727e70537a1.png)
 
 ```java
 @FeignClient(name = "openstack-hypervisor", configuration = {FeignSSLDisableConfig.class})
