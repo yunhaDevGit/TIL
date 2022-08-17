@@ -2,7 +2,7 @@
 
 Openstack API 요청 시 **`X-OpenStack-Nova-API-Version`** Header를 추가하여 특정 버전을 지정할 수 있습니다. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fb95939f-86d0-435f-8622-76d0556931ec/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/185025867-6fbd4d2d-7039-4bd8-970c-6df991b8a462.png)
 
 ```java
 이것은 개념적으로 "Accept" 헤더와 같은 역할을 합니다. 의미적으로 이것은 다음을 의미합니다.
@@ -17,7 +17,7 @@ Openstack API 요청 시 **`X-OpenStack-Nova-API-Version`** Header를 추가하�
 
 Openstack4j 라이브러리의 API가 아닌 Feign Client로 특정 버전을 지정하여 요청.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bbbb7bb4-23a1-4b05-8ff3-9446c36300a4/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/185025904-2291412d-f4ee-45c8-a189-873101e0812d.png)
 
 ```java
 @FeignClient(name = "openstack-hypervisor", configuration = {FeignSSLDisableConfig.class})
