@@ -193,7 +193,7 @@ java: constructor Point in class chapter7.Point cannot be applied to given types
   reason: actual and formal argument lists differ in length
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2c6b4b91-5502-45f5-8f88-8d2ed1be31fb/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/194341304-f6cf77fe-31e4-4cd7-ae3e-50102b509629.png)
 
 **원인**
 
@@ -204,3 +204,5 @@ java: constructor Point in class chapter7.Point cannot be applied to given types
 Point(..) 생성자에서는 `super()`를 통해 `Object()` 생성자를 호출하고, Point3D(..) 생성자에서는 `super()`를 통해 `Point()` 생성자를 호출한다.
 
 그러나 이때, Point() 기본 생성자가 없기 때문에 에러가 발생한다.
+
+![image](https://user-images.githubusercontent.com/74949294/194341344-97320501-ea68-4086-b9e2-67a828c77b31.png)
