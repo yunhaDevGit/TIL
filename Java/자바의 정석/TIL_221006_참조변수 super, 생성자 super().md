@@ -144,7 +144,8 @@ class Point {
 }
 ```
 
-**예제!! 중요!!!**
+
+## 예제!! 중요!!!
 
 ```java
 package chapter7;
@@ -195,7 +196,7 @@ java: constructor Point in class chapter7.Point cannot be applied to given types
 
 ![image](https://user-images.githubusercontent.com/74949294/194341304-f6cf77fe-31e4-4cd7-ae3e-50102b509629.png)
 
-**원인**
+### 원인
 
 모든 생성자는 첫 줄에 다른 생성자를 호출해야 한다.
 
