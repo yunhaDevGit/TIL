@@ -5,3 +5,11 @@
 - 연산의 결과로 boolean값인 true와 false 중의 하나를 반환
 - instanceof를 이용한 연산결과로 true를 얻었다는 것은 참조변수가 검사한 타입으로 형변환이 가능하다는 것
 +) 값이 null인 참조변수에 대해 instanceof연산을 수행하면 false를 결과로 얻음
+
+```java
+void doWork(Car c) {
+       if(c instanceof FireEngine) { //1.형변환이 가능한지 확인
+    	FireEngine fe = (FireEngine)c; //2.형변환
+        fe.water();
+        ...
+```
