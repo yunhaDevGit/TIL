@@ -1,6 +1,6 @@
 # ArrayList
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/90239853-511f-4f4f-9e33-1f5a52b1d7dc/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/223123911-9617da79-ff08-4073-901d-237e8de5e1f3.png)
 
 - ArrayList는 기존 Vector를 개선한 것으로 구현 원리와 기능적으로는 동일
 - ArrayList와 달리 Vector는 자체적으로 동기화처리가 되어 있다
@@ -51,8 +51,10 @@
     ### ArrayList에 저장된 객체의 삭제 과정
 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c67fb838-a6c2-4a05-9da2-e78c400d003f/Untitled.png)
+![image](https://user-images.githubusercontent.com/74949294/223123966-cab46db0-18f7-487c-8a27-5bd12a9dda56.png)
 
 ### ArrayList 삭제 과정 예
 
 - 끝에서부터 지우면 성능상 더 유리하다
+
+![image](https://user-images.githubusercontent.com/74949294/223124044-ec118993-2835-42c7-8932-ad1a0a08bc47.png)
