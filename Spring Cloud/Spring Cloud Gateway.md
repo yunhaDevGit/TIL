@@ -13,27 +13,6 @@ Spring Cloud 또한 zuul2와 같이 비동기, 논블로킹 방식을 지원하�
 *SPring Cloud Gateway는 Netty 런타임 기반으로 동작하므로 서블릿 컨테이너나 WAR로 빌드 된 경우 동작하지 않는다*
 
 
-### 용어
-- Route(경로) : 게이트웨이의 기본 골격. ID, 목적지 URI, 조건부 집합, 필터 집합으로 구성. 조건부가 맞으면 해당 경로로 이동
-
-- Predicate(조건부) : 조건부를 통해 Header나 Parameter같은 HTTP 요청의 모든 항목을 비교할 수 있다
-
-- Filter(필터) : 특정 팩토리로 구성된 Spring Framework Gateway Filter 인스턴스. Filter에서는 다운 스트림 요청 전후에 요청/응답을 수정할 수 있다.
-
-
-
-
-### 동작 원리
-아래의 다이어그램은 Spring Cloud Gateway가 전체적으로 동작하는 방식에 대한 전체적인 개요이다.
-
-![Spring Cloud Gateway Diagram](https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/images/spring_cloud_gateway_diagram.png)
-
-Client는 Spring Cloud Gateway로 요청을 보내고, 만약 해당 요청이 route와 일치하는 것이 있다 판단할 경우 Gateway Handler Mapping이 Gateway Web Handler에게 해당 요청을 전달합니다. 
-
-이 핸들러는 해당 요청에 대한 filter chain을 이용해 실행한다. 필터가 점선으로 구분되는 이유는 필터가 프록시 요청을 보내기 전후에 로직을 실행할 수 있기 때문이다.
-
-사전 필터가 실행 된 후 프록시 요청을 보내고, 사후 필터가 실행된다.
-
 
 ## Spring Cloud Gateway 구성 요소
 
@@ -54,11 +33,24 @@ Client는 Spring Cloud Gateway로 요청을 보내고, 만약 해당 요청이 r
 
 ## Spring Cloud Gateway 동작원리
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/254ee0a6-0b47-484d-ab61-4c597110e5c2/Untitled.png)
+![image](https://github.com/yunhaDevGit/TIL/assets/74949294/65f4abe5-0be9-4bd7-8969-cea10b908ef6)
 
 클라이언트에서 들어온 요청은 **Gateway Handler Mapping**을 통해 요청 경로와 일치 여부를 판단하고, **Gateway Web Handler**에서 요청과 관련된 필터 체인을 통해 요청이 전송되게 됩니다. 
 
 이후 적용되는 **Filter**를 통해 요청 또는 응답에 필요한 전처리, 후처리를 할 수 있으며 **Proxy Filter**는 프록시 요청이 처리될 때 수행됩니다.
+
+
+
+아래의 다이어그램은 Spring Cloud Gateway가 전체적으로 동작하는 방식에 대한 전체적인 개요입니다.
+
+![Spring Cloud Gateway Diagram](https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/images/spring_cloud_gateway_diagram.png)
+
+Client는 Spring Cloud Gateway로 요청을 보내고, 만약 해당 요청이 route와 일치하는 것이 있다 판단할 경우 Gateway Handler Mapping이 Gateway Web Handler에게 해당 요청을 전달합니다. 
+
+이 핸들러는 해당 요청에 대한 filter chain을 이용해 실행한다. 필터가 점선으로 구분되는 이유는 필터가 프록시 요청을 보내기 전후에 로직을 실행할 수 있기 때문이다.
+
+사전 필터가 실행 된 후 프록시 요청을 보내고, 사후 필터가 실행된다.
+
 
 ## 작성 방법
 
