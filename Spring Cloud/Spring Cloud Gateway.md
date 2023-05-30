@@ -34,3 +34,60 @@ Client는 Spring Cloud Gateway로 요청을 보내고, 만약 해당 요청이 r
 
 사전 필터가 실행 된 후 프록시 요청을 보내고, 사후 필터가 실행된다.
 
+
+## Spring Cloud Gateway 구성 요소
+
+### Route
+
+- API Gateway의 가장 기본 요소
+- 서비스의 고유한 값인 id, 요청할 uri, Predicate, Filter로 구성
+- 요청된 uri의 조건이 predicate와 일치하는지 확인 후, 일치하는 경우 해당 uri 경로로 요청 매핑
+
+### Predicate
+
+- API Gateway로 들어온 요청이 주어진 조건을 만족하는지 확인하는 구성요소
+- 하나 이상의 조건을 정의할 수 있으며, 만약 Predicate 조건에 맞지 않을 경우 HTTP 404 Not Found 응답 반환
+
+### Filter
+
+- API  Gateway로 들어오는 요청에 대해 Filter를 적용하여 선처리 및 후처리를 할 수 있게 해주는 구성 요소
+
+## Spring Cloud Gateway 동작원리
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/254ee0a6-0b47-484d-ab61-4c597110e5c2/Untitled.png)
+
+클라이언트에서 들어온 요청은 **Gateway Handler Mapping**을 통해 요청 경로와 일치 여부를 판단하고, **Gateway Web Handler**에서 요청과 관련된 필터 체인을 통해 요청이 전송되게 됩니다. 
+
+이후 적용되는 **Filter**를 통해 요청 또는 응답에 필요한 전처리, 후처리를 할 수 있으며 **Proxy Filter**는 프록시 요청이 처리될 때 수행됩니다.
+
+## 작성 방법
+
+application.yml(또는 .properties)에 작성하는 방법과 Java Code로 작성하는 방법 두 가지가 있습니다.
+
+```yaml
+server:
+  port: 8000
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: first-service
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/first-service/**
+        - id: second-service
+          uri: http://localhost:8082/
+          predicates:
+            - Path=/second-service/**
+          filters:
+            - AddRequestHeader=second-request, second-request-header
+            - AddResponseHeader=second-response, second-response-header
+```
+
+1. locallost:8000/first-service/~~ 요청이 게이트웨이로 들어옵니다.
+2. 요청 받은 uri의 조건을 predicates에서 탐색합니다.
+    
+    (cloud.gateway.routes.id.predicate의 /first-service/** 가 확인됩니다.)
+    
+3. 해당 route에 해당되는 uri인 http://localhost:8081/으로 요청을 전달합니다.
